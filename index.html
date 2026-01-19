@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Xanthos - Learn Rust by Converting Processing</title>
+    <style>
+        body {
+            font-family: "Minion Pro", "Adobe Minion Pro", Georgia, serif;
+            max-width: 600px;
+            margin: 100px auto;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .logo-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 0 auto 30px;
+        }
+        
+        .logo-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .logo-iron {
+            animation: fadeInOut 3.2s ease-in-out infinite;
+        }
+        
+        .logo-rust {
+            animation: fadeOutIn 3.2s ease-in-out infinite;
+        }
+        
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes fadeOutIn {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        h1 { font-size: 3em; margin: 0; }
+        .tagline { font-size: 1.5em; color: #CE4F1A; margin: 20px 0; }
+        .subtitle { color: #64748B; }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="RUST_crab.png" alt="Rust Crab" class="logo-rust">
+        <img src="Iron_crab.png" alt="Iron Crab" class="logo-iron">
+    </div>
+    <h1>Xanthos</h1>
+    <p class="tagline">Learn Rust by converting Processing</p>
+    <p class="subtitle">Building in public. Coming soon.</p>
+    <p><a href="mailto:xanthos@gmail.com">Get notified</a></p>
+</body>
+</html>
