@@ -8,7 +8,6 @@ pub mod openai;
 pub mod gemini;
 
 use async_trait::async_trait;
-use secrecy::SecretString;
 use serde::{Deserialize, Serialize};
 use std::time::Duration;
 use thiserror::Error;

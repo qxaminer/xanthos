@@ -20,12 +20,12 @@
 
 pub mod sanitize;
 pub mod backends;
+pub mod orchestrate;
 
 // Future modules (Phase 2+)
 // pub mod arena;
 // pub mod compute;
 // pub mod stable;
-// pub mod orchestrate;
 // pub mod testing;
 
 /// Re-exports for convenience
@@ -50,4 +50,12 @@ pub use backends::{
     claude::ClaudeBackend,
     openai::OpenAIBackend,
     gemini::GeminiBackend,
+};
+
+pub use orchestrate::{
+    Orchestrator,
+    OrchestratorConfig,
+    OrchestratorError,
+    BlindResponse,
+    BlindTestResult,
 };
