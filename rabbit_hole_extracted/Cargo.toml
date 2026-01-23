@@ -1,0 +1,13 @@
+[package]
+name = "xanthos"
+version = "0.1.0"
+edition = "2021"
+description = "Xanthos dreams of arrays - a crab visualization"
+authors = ["Fields"]
+
+[dependencies]
+nannou = "0.19"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
