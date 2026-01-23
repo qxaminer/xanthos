@@ -2,160 +2,330 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Egg Preview</title>
+    <title>Xanthos - The Curtain</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: "Minion Pro", Georgia, serif;
-            max-width: 600px;
-            margin: 100px auto;
-            text-align: center;
-            padding: 20px;
-            background: #fafafa;
+            background: #1a1a1a;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        .logo-container {
-            position: relative;
-            width: 300px;
-            height: 200px;
-            margin: 0 auto 10px;
+        /* THE CURTAIN */
+        .curtain-container {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 100;
+            pointer-events: none;
         }
 
-        .logo-container img {
+        .curtain-left, .curtain-right {
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
+            width: 50%;
             height: 100%;
-            object-fit: contain;
+            background: linear-gradient(180deg,
+                rgba(139, 48, 16, 0.85) 0%,
+                rgba(206, 79, 26, 0.75) 20%,
+                rgba(139, 48, 16, 0.85) 40%,
+                rgba(206, 79, 26, 0.75) 60%,
+                rgba(139, 48, 16, 0.85) 80%,
+                rgba(206, 79, 26, 0.75) 100%);
+            background-size: 100% 30px;
+            transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
         }
 
-        .logo-iron {
-            animation: fadeInOut 3.2s ease-in-out infinite;
+        .curtain-left { left: 0; transform-origin: left; }
+        .curtain-right { right: 0; transform-origin: right; }
+
+        /* GOLDEN TASSELS */
+        .tassel-left, .tassel-right {
+            position: absolute;
+            top: 20%;
+            width: 20px;
+            height: 120px;
+            z-index: 101;
+            transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .logo-rust {
-            animation: fadeOutIn 3.2s ease-in-out infinite;
+        .tassel-left { right: -10px; }
+        .tassel-right { left: -10px; }
+
+        .tassel-rope {
+            width: 8px;
+            height: 80px;
+            background: linear-gradient(90deg, #8B6914, #D4AF37, #8B6914);
+            margin: 0 auto;
+            border-radius: 4px;
         }
 
-        @keyframes fadeInOut {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
-        }
-
-        @keyframes fadeOutIn {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        .egg-container {
+        .tassel-fringe {
+            width: 24px;
+            height: 40px;
+            background: linear-gradient(180deg, #D4AF37, #B8960C);
+            margin: 0 auto;
+            border-radius: 0 0 50% 50%;
             position: relative;
-            width: 120px;
-            height: 160px;
-            margin: 0 auto 20px;
         }
 
-        .egg-half {
+        .tassel-fringe::after {
+            content: '';
             position: absolute;
-            width: 50px;
-            height: 100px;
-            background: linear-gradient(135deg, #CE4F1A 0%, #8B3010 100%);
-            top: 0;
-            box-shadow: inset -5px -5px 15px rgba(0,0,0,0.3),
-                        inset 3px 3px 8px rgba(255,255,255,0.15);
+            bottom: 5px;
+            left: 2px;
+            right: 2px;
+            height: 20px;
+            background: repeating-linear-gradient(90deg,
+                #D4AF37 0px, #D4AF37 2px,
+                transparent 2px, transparent 4px);
         }
 
-        .egg-half.left {
-            left: 10px;
-            border-radius: 80% 0 0 60% / 60% 0 0 40%;
-            transform: rotate(-12deg);
-            clip-path: polygon(0 0, 100% 5%, 95% 40%, 100% 60%, 90% 100%, 0 100%);
-        }
+        /* OPEN STATE */
+        .curtains-open .curtain-left { transform: translateX(-100%); }
+        .curtains-open .curtain-right { transform: translateX(100%); }
+        .curtains-open .tassel-left { transform: translateX(-50vw); }
+        .curtains-open .tassel-right { transform: translateX(50vw); }
 
-        .egg-half.right {
-            right: 10px;
-            border-radius: 0 80% 60% 0 / 0 60% 40% 0;
-            transform: rotate(12deg);
-            clip-path: polygon(0 5%, 100% 0, 100% 100%, 10% 100%, 0 60%, 5% 40%);
-        }
-
-        .spill {
-            position: absolute;
-            top: 50px;
+        /* THE CRAB - CENTER STAGE */
+        .crab-stage {
+            position: fixed;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2px;
+            transform: translate(-50%, -50%);
+            z-index: 200;
+            cursor: pointer;
         }
 
-        .spill-row {
-            display: flex;
-            align-items: center;
-            gap: 4px;
+        .crab-img {
+            width: 200px;
+            height: auto;
+            transition: transform 0.3s;
         }
 
-        .baby-crab {
-            font-size: 16px;
-            animation: wiggle 0.4s ease-in-out infinite alternate;
+        .crab-stage:hover .crab-img {
+            transform: scale(1.1);
         }
 
-        .baby-crab:nth-child(2) { animation-delay: 0.1s; }
-        .baby-crab:nth-child(3) { animation-delay: 0.2s; }
+        /* CRAB ARMS */
+        .crab-arm {
+            position: absolute;
+            top: 40%;
+            width: 60px;
+            height: 20px;
+            background: linear-gradient(90deg, #CE4F1A, #8B3010);
+            border-radius: 10px;
+            transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-        .code-bit {
-            font-family: "SF Mono", "Monaco", monospace;
+        .crab-arm.left { left: -30px; transform-origin: right center; }
+        .crab-arm.right { right: -30px; transform-origin: left center; }
+
+        .curtains-open .crab-arm.left { transform: translateX(-40vw) rotate(-20deg) scaleX(8); }
+        .curtains-open .crab-arm.right { transform: translateX(40vw) rotate(20deg) scaleX(8); }
+
+        /* CONTENT BEHIND CURTAIN */
+        .stage-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 40px;
+            min-height: 100vh;
+            opacity: 0;
+            transition: opacity 1s 0.5s;
+        }
+
+        .curtains-open .stage-content { opacity: 1; }
+
+        .panel {
+            background: rgba(250, 250, 250, 0.95);
+            border-radius: 12px;
+            padding: 30px;
+            overflow-y: auto;
+            max-height: 80vh;
+            margin-top: 60px;
+        }
+
+        /* CODE PANEL */
+        .code-panel pre {
+            font-family: "SF Mono", Monaco, monospace;
             font-size: 11px;
             color: #8B3010;
-            font-weight: bold;
+            white-space: pre-wrap;
+            text-align: left;
+            line-height: 1.5;
         }
 
-        @keyframes wiggle {
-            from { transform: rotate(-15deg) scale(1); }
-            to { transform: rotate(15deg) scale(1.1); }
+        /* WRITING PANEL */
+        .writing-panel {
+            font-style: italic;
+            color: #5a2000;
+            line-height: 2;
+            font-size: 1.2em;
+            text-align: left;
         }
 
-        h1 { font-size: 3em; margin: 0; }
-        .tagline { font-size: 1.5em; color: #CE4F1A; margin: 20px 0; }
-        .subtitle { color: #64748B; }
+        /* TITLE */
+        .title-area {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 150;
+            color: #D4AF37;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .title-area h1 { font-size: 3em; }
+        .title-area .tagline { font-size: 1.5em; color: #CE4F1A; }
+
+        /* CLICK HINT */
+        .click-hint {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #D4AF37;
+            font-size: 1em;
+            z-index: 300;
+            animation: pulse 2s infinite;
+        }
+
+        .curtains-open .click-hint { display: none; }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
     </style>
 </head>
 <body>
-    <div class="logo-container">
-        <img src="RUST_crab.png" alt="Rust Crab" class="logo-rust">
-        <img src="Iron_crab.png" alt="Iron Crab" class="logo-iron">
-    </div>
+    <div class="click-hint">~ click the crab ~</div>
 
-    <div class="egg-container">
-        <div class="egg-half left"></div>
-        <div class="egg-half right"></div>
-        <div class="spill">
-            <div class="spill-row">
-                <span class="baby-crab">🦀</span>
+    <!-- CURTAINS -->
+    <div class="curtain-container" id="curtains">
+        <div class="curtain-left">
+            <div class="tassel-left">
+                <div class="tassel-rope"></div>
+                <div class="tassel-fringe"></div>
             </div>
-            <div class="spill-row">
-                <span class="code-bit">fn</span>
-                <span class="baby-crab">🦀</span>
-                <span class="code-bit">main()</span>
-            </div>
-            <div class="spill-row">
-                <span class="baby-crab">🦀</span>
-                <span class="code-bit">{</span>
-                <span class="baby-crab">🦀</span>
-            </div>
-            <div class="spill-row">
-                <span class="code-bit">println!</span>
-            </div>
-            <div class="spill-row">
-                <span class="baby-crab">🦀</span>
-                <span class="code-bit">}</span>
-                <span class="baby-crab">🦀</span>
+        </div>
+        <div class="curtain-right">
+            <div class="tassel-right">
+                <div class="tassel-rope"></div>
+                <div class="tassel-fringe"></div>
             </div>
         </div>
     </div>
 
-    <h1>Xanthos</h1>
-    <p class="tagline">rustyport</p>
-    <p class="subtitle">Building in public. Coming soon.</p>
+    <!-- THE CRAB -->
+    <div class="crab-stage" id="crab">
+        <div class="crab-arm left"></div>
+        <img src="RUST_crab.png" alt="Rust Crab" class="crab-img">
+        <div class="crab-arm right"></div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="stage-content">
+        <div class="panel code-panel">
+<pre>// TENSOR - bare metal
+pub struct Tensor {
+    data: Vec&lt;f32&gt;,
+    shape: Vec&lt;usize&gt;,
+}
+
+impl Tensor {
+    pub fn zeros(shape: &amp;[usize]) -&gt; Self {
+        let size = shape.iter().product();
+        Tensor {
+            data: vec![0.0; size],
+            shape: shape.to_vec(),
+        }
+    }
+
+    pub fn randn(shape: &amp;[usize]) -&gt; Self {
+        let size = shape.iter().product();
+        let mut t = Tensor::zeros(shape);
+        let mut seed: u64 = 42;
+        for i in 0..size {
+            seed = seed.wrapping_mul(6364136223846793005)
+                      .wrapping_add(1);
+            let u = (seed >> 33) as f32 / 4294967296.0;
+            t.data[i] = (u - 0.5) * 2.0;
+        }
+        t
+    }
+
+    pub fn matmul(&amp;self, other: &amp;Tensor) -&gt; Tensor {
+        let (m, k1) = (self.shape[0], self.shape[1]);
+        let (k2, n) = (other.shape[0], other.shape[1]);
+        assert_eq!(k1, k2);
+        let mut out = Tensor::zeros(&amp;[m, n]);
+        for i in 0..m {
+            for j in 0..n {
+                let mut sum = 0.0;
+                for k in 0..k1 {
+                    sum += self.data[i*k1+k]
+                         * other.data[k*n+j];
+                }
+                out.data[i*n+j] = sum;
+            }
+        }
+        out
+    }
+}
+
+// DENSE LAYER
+pub struct Dense {
+    weights: Tensor,
+    bias: Tensor,
+}
+
+impl Dense {
+    pub fn forward(&amp;self, x: &amp;Tensor) -&gt; Tensor {
+        let mut out = x.matmul(&amp;self.weights);
+        for i in 0..out.data.len() {
+            out.data[i] = relu(out.data[i]);
+        }
+        out
+    }
+}
+
+fn main() {
+    println!("🦀 MachineLearningKing 🦀");
+}</pre>
+        </div>
+
+        <div class="panel writing-panel">
+            The Branched Dividians were at it again.<br><br>
+            Some semi-sequent jima-jam that sounded really tickley to the ear while also rolling off the tongue.<br><br>
+            Tis a gift to be simple.<br><br>
+            Iron gets tired and rusts.<br><br>
+            But whither the dust?<br><br>
+            <span style="color: #CE4F1A;">—</span><br><br>
+            The crab extends its arms.<br>
+            The curtain parts.<br>
+            Code on one side.<br>
+            Poetry on the other.<br><br>
+            This is Xanthos.<br>
+            This is rustyport.<br>
+            This is the MachineLearningKing.<br><br>
+            <span style="font-size: 0.8em; color: #999;">(but it's not from Alaska)</span>
+        </div>
+    </div>
+
+    <div class="title-area">
+        <h1>Xanthos</h1>
+        <p class="tagline">rustyport</p>
+    </div>
+
+    <script>
+        document.getElementById('crab').addEventListener('click', function() {
+            document.body.classList.toggle('curtains-open');
+        });
+    </script>
 </body>
 </html>

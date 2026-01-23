@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xanthos Dreams of Arrays</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #000;
+            font-family: 'Courier New', monospace;
+        }
+        canvas {
+            display: block;
+        }
+        #title {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(230, 217, 180, 0.7);
+            font-size: 24px;
+            pointer-events: none;
+            z-index: 100;
+        }
+        #state {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(128, 204, 128, 0.6);
+            font-size: 16px;
+            pointer-events: none;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">Xanthos Dreams of Arrays</div>
+    <div id="state">// the gonads know, the gonads always knew</div>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const CODE = `// Xanthos dreamed this before wgpu existed
+@group(0) @binding(0) var<uniform> swirl: Swirl;
+
+fn boid_to_child(fish: vec3<f32>, fear: f32) -> Crab {
+    // the gonads know
+    // the gonads always knew
+    return Crab {
+        pos: fish.xy,
+        eyes: vec2<f32>(NO_LID, NO_LID),
+        dream: fear * swirl.time,
+    };
+}
+
+fn main() {
+    let xanthos = Crab::new(Lidless, Lidless);
+    
+    loop {
+        xanthos.dream(Fish::swirl());
+        xanthos.wake();
+        xanthos.climb();
+        
+        if let Some(berry) = surface.catch() {
+            // this is the moment
+            // before dissolution
+            // before the deep reclaims
+            xanthos.taste(berry);
+        }
+    }
+}
+
+// The pattern was always there in the swirl
+// each fish a vertex
+// each turn a transformation matrix
+// each predator-shadow a shader uniform
+// passed down from the sun
+
+struct Crab {
+    pos: vec2<f32>,
+    eyes: vec2<f32>,
+    dream: f32,
+}
+
+// Blueberry muffins dissolve in the deep
+// That's why Xanthos went up top
+// to catch some berry
+
+@fragment
+fn dissolve(uv: vec2<f32>, depth: f32) -> vec4<f32> {
+    let crumb = noise(uv * 10.0);
+    let pressure = exp(-depth * 0.1);
+    return vec4(crumb * pressure, 0.0, crumb, pressure);
+}
+
+// The lobster doesn't dream of arrays
+// The lobster is the array now
+// Segmented. Indexed. Accessed by fork.
+
+fn rabbit_hole(depth: f32) -> f32 {
+    return 38.83;  // miles, as the crow flies
+}
+
+// no rabbits
+// no men
+// no words
+// just core`;
+
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const titleEl = document.getElementById('title');
+        const stateEl = document.getElementById('state');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Fish class
+        class Fish {
+            constructor(x, y) {
+                this.pos = { x, y };
+                this.vel = { x: 0, y: 0 };
+                this.becomingCrab = 0.0;
+            }
+        }
+
+        // Xanthos class
+        class Xanthos {
+            constructor() {
+                this.pos = { x: 0, y: -300 };
+                this.eyeAngles = [0.0, 0.0];
+                this.depth = 1.0;
+                this.dreaming = true;
+                this.hasBerry = false;
+            }
+        }
+
+        // Model
+        const model = {
+            fish: [],
+            xanthos: new Xanthos(),
+            codeScroll: 0.0,
+            alphaPhase: 0.0,
+            time: 0.0,
+            berryPos: null,
+        };
+
+        // Initialize fish swirl
+        for (let i = 0; i < 120; i++) {
+            const angle = i * 0.15;
+            const r = 100 + (i * 0.5);
+            model.fish.push(new Fish(
+                Math.cos(angle) * r,
+                Math.sin(angle) * r - 100
+            ));
+        }
+
+        // Helper functions
+        function mapRange(value, inMin, inMax, outMin, outMax) {
+            return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+        }
+
+        function normalize(v) {
+            const len = Math.sqrt(v.x * v.x + v.y * v.y);
+            if (len === 0) return { x: 0, y: 0 };
+            return { x: v.x / len, y: v.y / len };
+        }
+
+        function distance(p1, p2) {
+            return Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
+        }
+
+        // Update loop
+        function update() {
+            model.time += 0.016;
+            model.codeScroll += 0.5;
+            model.alphaPhase += 0.02;
+
+            // Berry spawns occasionally at surface
+            if (!model.berryPos && Math.random() < 0.005) {
+                model.berryPos = {
+                    x: Math.random() * 800 - 400,
+                    y: 350
+                };
+            }
+
+            // Berry dissolves (falls) if not caught
+            if (model.berryPos) {
+                model.berryPos.y -= 0.3;
+                if (model.berryPos.y < -400) {
+                    model.berryPos = null; // dissolved in the deep
+                }
+            }
+
+            // Xanthos behavior
+            if (model.xanthos.dreaming) {
+                // Dream phase: watch the swirl
+                model.xanthos.eyeAngles[0] += 0.03;
+                model.xanthos.eyeAngles[1] -= 0.02;
+
+                // Wake up after a while
+                if (model.time > 8.0 && model.time < 8.1) {
+                    model.xanthos.dreaming = false;
+                }
+            } else {
+                // Climbing phase: go for berry
+                if (model.berryPos) {
+                    const dir = normalize({
+                        x: model.berryPos.x - model.xanthos.pos.x,
+                        y: model.berryPos.y - model.xanthos.pos.y
+                    });
+                    model.xanthos.pos.x += dir.x * 2.0;
+                    model.xanthos.pos.y += dir.y * 2.0;
+                    model.xanthos.depth = mapRange(model.xanthos.pos.y, -300, 350, 1.0, 0.0);
+
+                    // Eyes track berry
+                    const toBerry = {
+                        x: model.berryPos.x - model.xanthos.pos.x,
+                        y: model.berryPos.y - model.xanthos.pos.y
+                    };
+                    model.xanthos.eyeAngles[0] = Math.atan2(toBerry.y, toBerry.x);
+                    model.xanthos.eyeAngles[1] = model.xanthos.eyeAngles[0] + 0.3;
+
+                    // Catch berry
+                    if (distance(model.xanthos.pos, model.berryPos) < 30) {
+                        model.xanthos.hasBerry = true;
+                        model.berryPos = null;
+                    }
+                } else if (!model.xanthos.hasBerry) {
+                    // No berry, sink back to dream
+                    model.xanthos.pos.y -= 0.5;
+                    if (model.xanthos.pos.y < -280) {
+                        model.xanthos.dreaming = true;
+                        model.xanthos.pos.y = -300;
+                    }
+                }
+            }
+
+            // Fish swirl (boid-like behavior)
+            const center = {
+                x: 0,
+                y: -50 + Math.sin(model.time * 0.5) * 50
+            };
+
+            for (const fish of model.fish) {
+                // Swirl toward center
+                const toCenter = {
+                    x: center.x - fish.pos.x,
+                    y: center.y - fish.pos.y
+                };
+                const dist = Math.sqrt(toCenter.x ** 2 + toCenter.y ** 2);
+
+                // Tangential velocity (creates swirl)
+                const tangent = normalize({ x: -toCenter.y, y: toCenter.x });
+
+                // Combine: orbit + slight inward pull
+                const orbitSpeed = 2.0 / (1.0 + dist * 0.01);
+                const toCenterNorm = normalize(toCenter);
+                fish.vel = {
+                    x: tangent.x * orbitSpeed + toCenterNorm.x * 0.1,
+                    y: tangent.y * orbitSpeed + toCenterNorm.y * 0.1
+                };
+
+                // Add some chaos
+                fish.vel.x += Math.sin(model.time * 3.0 + fish.pos.y * 0.1) * 0.3;
+                fish.vel.y += Math.cos(model.time * 2.7 + fish.pos.x * 0.1) * 0.3;
+
+                fish.pos.x += fish.vel.x;
+                fish.pos.y += fish.vel.y;
+
+                // Fish become crabs during the transformation phase
+                if (model.time > 5.0 && model.time < 12.0) {
+                    fish.becomingCrab = Math.min((model.time - 5.0) / 7.0, 1.0);
+                }
+                if (model.time > 15.0) {
+                    fish.becomingCrab = Math.max(1.0 - (model.time - 15.0) / 3.0, 0.0);
+                }
+            }
+        }
+
+        // Draw functions
+        function drawBabyCrab(pos, alpha, time) {
+            const wobble = Math.sin(time * 5.0 + pos.x * 0.1) * 0.1;
+
+            // Body
+            ctx.save();
+            ctx.translate(pos.x, pos.y);
+            ctx.rotate(wobble);
+            ctx.fillStyle = `rgba(230, 102, 77, ${alpha * 0.8})`;
+            ctx.beginPath();
+            ctx.ellipse(0, 0, 10, 8, 0, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+
+            // Eyes (lidless!)
+            for (const side of [-1, 1]) {
+                const eyePos = {
+                    x: pos.x + side * 4,
+                    y: pos.y + 4
+                };
+
+                // Eye stalk
+                ctx.strokeStyle = `rgba(204, 89, 64, ${alpha})`;
+                ctx.lineWidth = 1.5;
+                ctx.beginPath();
+                ctx.moveTo(pos.x + side * 3, pos.y + 2);
+                ctx.lineTo(eyePos.x, eyePos.y);
+                ctx.stroke();
+
+                // Eye
+                ctx.fillStyle = `rgba(26, 26, 26, ${alpha})`;
+                ctx.beginPath();
+                ctx.arc(eyePos.x, eyePos.y, 3, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Tiny claws
+            for (const side of [-1, 1]) {
+                const clawBase = {
+                    x: pos.x + side * 6,
+                    y: pos.y
+                };
+                ctx.fillStyle = `rgba(217, 89, 64, ${alpha * 0.7})`;
+                ctx.beginPath();
+                ctx.ellipse(clawBase.x + side * 2, clawBase.y, 4, 3, 0, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function drawXanthos(xanthos, time) {
+            const pos = xanthos.pos;
+            const sizeFactor = xanthos.dreaming ? 1.0 : 1.0 + xanthos.depth * 0.2;
+
+            // Glow when has berry
+            if (xanthos.hasBerry) {
+                ctx.fillStyle = `rgba(102, 51, 153, ${0.2 + Math.sin(time * 3.0) * 0.1})`;
+                ctx.beginPath();
+                ctx.ellipse(pos.x, pos.y, 80, 60, 0, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Main body
+            ctx.fillStyle = `rgba(217, 64, 38, 0.9)`;
+            ctx.beginPath();
+            ctx.ellipse(pos.x, pos.y, 50 * sizeFactor, 35 * sizeFactor, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Shell pattern
+            ctx.fillStyle = `rgba(191, 51, 26, 0.7)`;
+            ctx.beginPath();
+            ctx.ellipse(pos.x, pos.y + 5, 35 * sizeFactor, 20 * sizeFactor, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Eye stalks and eyes (LIDLESS - always watching)
+            for (let i = 0; i < 2; i++) {
+                const side = i === 0 ? -1 : 1;
+                const angle = xanthos.eyeAngles[i];
+                const stalkLength = 20 * sizeFactor;
+
+                const stalkEnd = {
+                    x: pos.x + side * 15 + Math.cos(angle) * stalkLength * 0.3,
+                    y: pos.y + 15 + Math.abs(Math.sin(angle)) * stalkLength * 0.5
+                };
+
+                // Stalk
+                ctx.strokeStyle = `rgba(204, 56, 31, 0.9)`;
+                ctx.lineWidth = 4;
+                ctx.beginPath();
+                ctx.moveTo(pos.x + side * 12, pos.y + 8);
+                ctx.lineTo(stalkEnd.x, stalkEnd.y);
+                ctx.stroke();
+
+                // Eye (NO LID)
+                ctx.fillStyle = `rgba(242, 242, 217, 1.0)`;
+                ctx.beginPath();
+                ctx.arc(stalkEnd.x, stalkEnd.y, 10, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Pupil (tracks... something)
+                const pupilOffset = {
+                    x: Math.cos(angle) * 2,
+                    y: Math.sin(angle) * 2
+                };
+                ctx.fillStyle = `rgba(13, 13, 13, 1.0)`;
+                ctx.beginPath();
+                ctx.arc(stalkEnd.x + pupilOffset.x, stalkEnd.y + pupilOffset.y, 5, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Claws
+            for (const side of [-1, 1]) {
+                const clawBase = {
+                    x: pos.x + side * 30,
+                    y: pos.y - 5
+                };
+                const clawAngle = side * 0.3 + Math.sin(time * 2.0) * 0.1;
+
+                // Upper claw
+                ctx.save();
+                ctx.translate(clawBase.x, clawBase.y);
+                ctx.rotate(clawAngle);
+                ctx.fillStyle = `rgba(230, 77, 51, 0.85)`;
+                ctx.beginPath();
+                ctx.ellipse(side * 12, 5, 18 * sizeFactor, 10 * sizeFactor, 0, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+
+                // Lower claw
+                ctx.save();
+                ctx.translate(clawBase.x, clawBase.y);
+                ctx.rotate(-clawAngle * 0.5);
+                ctx.fillStyle = `rgba(217, 71, 46, 0.8)`;
+                ctx.beginPath();
+                ctx.ellipse(side * 10, -3, 14 * sizeFactor, 7 * sizeFactor, 0, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+
+            // Legs
+            for (let i = 0; i < 4; i++) {
+                for (const side of [-1, 1]) {
+                    const legBase = {
+                        x: pos.x + side * (15 + i * 5),
+                        y: pos.y - 10 - i * 3
+                    };
+                    const legAngle = side * (0.5 + i * 0.15) + Math.sin(time * 3.0 + i) * 0.1;
+                    const legEnd = {
+                        x: legBase.x + Math.cos(legAngle) * 15 * side,
+                        y: legBase.y + Math.sin(legAngle) * -15
+                    };
+
+                    ctx.strokeStyle = `rgba(191, 51, 31, 0.7)`;
+                    ctx.lineWidth = 3;
+                    ctx.beginPath();
+                    ctx.moveTo(legBase.x, legBase.y);
+                    ctx.lineTo(legEnd.x, legEnd.y);
+                    ctx.stroke();
+                }
+            }
+
+            // Berry in claw if caught
+            if (xanthos.hasBerry) {
+                const berryPos = {
+                    x: pos.x + 35,
+                    y: pos.y + 5
+                };
+                ctx.fillStyle = `rgba(64, 38, 166, 0.95)`;
+                ctx.beginPath();
+                ctx.ellipse(berryPos.x, berryPos.y, 14, 12, 0, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.fillStyle = `rgba(128, 102, 230, 0.5)`;
+                ctx.beginPath();
+                ctx.ellipse(berryPos.x - 3, berryPos.y + 3, 4, 3, 0, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function draw() {
+            const win = { w: canvas.width, h: canvas.height, top: canvas.height / 2, bottom: -canvas.height / 2 };
+
+            // Deep dark gradient background
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Depth gradient (darker at bottom)
+            for (let i = 0; i < 20; i++) {
+                const y = mapRange(i, 0, 19, win.bottom, win.top);
+                const h = win.h / 20;
+                const darkness = mapRange(i, 0, 19, 0.0, 0.15);
+                ctx.fillStyle = `rgba(0, 5, 20, ${darkness})`;
+                ctx.fillRect(0, canvas.height / 2 - y - h / 2, canvas.width, h);
+            }
+
+            // === SCROLLING CODE BACKGROUND ===
+            const alphaFluctuate = (Math.sin(model.alphaPhase) * 0.5 + 0.5) * 0.15 + 0.05;
+            const lines = CODE.split('\n');
+            const lineHeight = 18;
+            const totalHeight = lines.length * lineHeight;
+            let scrollOffset = model.codeScroll % totalHeight;
+
+            ctx.font = '14px monospace';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'middle';
+
+            for (let i = 0; i < lines.length; i++) {
+                let y = win.top - 50 - (i * lineHeight) + scrollOffset;
+
+                // Wrap around
+                if (y > win.top + 50) {
+                    y -= totalHeight;
+                } else if (y < win.bottom - 50) {
+                    y += totalHeight;
+                }
+
+                // Fluctuating alpha based on position and time
+                const localAlpha = alphaFluctuate * (1.0 + Math.sin(y * 0.01 + model.alphaPhase * 2.0) * 0.5);
+                ctx.fillStyle = `rgba(77, 204, 102, ${localAlpha})`;
+                ctx.fillText(lines[i], canvas.width / 2 - 200, canvas.height / 2 - y);
+            }
+
+            // === FISH / BABY CRABS SWIRL ===
+            ctx.save();
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            for (const fish of model.fish) {
+                const t = fish.becomingCrab;
+
+                if (t < 0.5) {
+                    // Draw as fish
+                    const fishAlpha = 1.0 - t * 2.0;
+                    const angle = Math.atan2(fish.vel.y, fish.vel.x);
+
+                    ctx.save();
+                    ctx.translate(fish.pos.x, fish.pos.y);
+                    ctx.rotate(angle);
+
+                    // Fish body
+                    ctx.fillStyle = `rgba(179, 191, 230, ${fishAlpha * 0.8})`;
+                    ctx.beginPath();
+                    ctx.ellipse(0, 0, 12, 6, 0, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // Fish tail
+                    ctx.fillStyle = `rgba(153, 166, 217, ${fishAlpha * 0.6})`;
+                    ctx.beginPath();
+                    ctx.moveTo(-8, 0);
+                    ctx.lineTo(-14, 4);
+                    ctx.lineTo(-14, -4);
+                    ctx.closePath();
+                    ctx.fill();
+
+                    ctx.restore();
+                }
+
+                if (t > 0.3) {
+                    // Draw as baby crab (fading in)
+                    const crabAlpha = Math.min((t - 0.3) / 0.7, 1.0);
+                    drawBabyCrab(fish.pos, crabAlpha, model.time);
+                }
+            }
+            ctx.restore();
+
+            // === XANTHOS (the dreamer) ===
+            ctx.save();
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            drawXanthos(model.xanthos, model.time);
+            ctx.restore();
+
+            // === BERRY (if present) ===
+            if (model.berryPos) {
+                ctx.save();
+                ctx.translate(canvas.width / 2, canvas.height / 2);
+                // Blueberry with dissolving edges at depth
+                const depthFactor = mapRange(model.berryPos.y, -400, 350, 0.3, 1.0);
+
+                ctx.fillStyle = `rgba(51, 26, 153, ${depthFactor})`;
+                ctx.beginPath();
+                ctx.ellipse(model.berryPos.x, model.berryPos.y, 16 * depthFactor, 14 * depthFactor, 0, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Berry highlight
+                ctx.fillStyle = `rgba(128, 102, 230, ${depthFactor * 0.5})`;
+                ctx.beginPath();
+                ctx.ellipse(model.berryPos.x - 3, model.berryPos.y + 3, 4 * depthFactor, 3 * depthFactor, 0, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Dissolving particles if deep
+                if (model.berryPos.y < 0) {
+                    for (let i = 0; i < 5; i++) {
+                        const offset = {
+                            x: Math.sin(model.time * 2.0 + i) * 20,
+                            y: Math.cos(model.time * 1.5 + i * 0.7) * 15 - 10
+                        };
+                        ctx.fillStyle = `rgba(77, 51, 128, ${(1.0 - depthFactor) * 0.3})`;
+                        ctx.beginPath();
+                        ctx.arc(model.berryPos.x + offset.x, model.berryPos.y + offset.y, 3, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+                ctx.restore();
+            }
+
+            // Update state text
+            if (model.xanthos.hasBerry) {
+                stateEl.textContent = '// this is the moment, before dissolution';
+            } else if (model.xanthos.dreaming) {
+                stateEl.textContent = '// the gonads know, the gonads always knew';
+            } else {
+                stateEl.textContent = '// Xanthos went up top to catch some berry';
+            }
+        }
+
+        // Animation loop
+        function animate() {
+            update();
+            draw();
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
