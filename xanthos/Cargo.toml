@@ -1,0 +1,22 @@
+[package]
+name = "xanthos"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# TEACH: `nannou` is the creative-coding framework (windowing, drawing, math).
+# Version 0.19 matches your original rabbit_hole sketch.
+nannou = "0.19"
+
+# TEACH: `nannou_audio` is a thin, safe wrapper around CPAL (cross-platform audio I/O).
+# The callback runs on a real-time audio thread.
+nannou_audio = "0.19"
+
+# TEACH: `bytemuck` lets us safely reinterpret bytes as typed data (when types are Pod).
+# We use it to cast an interleaved `&mut [f32]` into `&mut [StereoSample]` with zero copies.
+bytemuck = { version = "1.14", features = ["derive"] }
+
+[profile.release]
+# TEACH: Release builds matter for real-time audio + 60fps visuals.
+opt-level = 3
+lto = "thin"
