@@ -1,0 +1,58 @@
+[package]
+name = "tinylm"
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0"
+description = "Multi-LLM orchestrator with local inference"
+
+[dependencies]
+# Compute
+wgpu = "0.19"
+bytemuck = { version = "1.14", features = ["derive"] }
+
+# Async runtime
+tokio = { version = "1.36", features = ["full"] }
+async-trait = "0.1"
+
+# HTTP clients for APIs
+reqwest = { version = "0.11", features = ["json", "rustls-tls"], default-features = false }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Secret handling
+secrecy = "0.8"
+
+# Model loading
+safetensors = "0.4"
+memmap2 = "0.9"
+half = "2.3"
+
+# Utilities
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+uuid = { version = "1.7", features = ["v4"] }
+
+# PII Sanitization
+regex = "1.10"
+glob = "0.3"
+lazy_static = "1.4"
+
+# Environment
+dotenvy = "0.15"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["async_tokio"] }
+tokio-test = "0.4"
+tempfile = "3.10"
+
+[[bench]]
+name = "inference_bench"
+harness = false
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
