@@ -1,0 +1,10 @@
+[package]
+name = "xanthos_viz"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nannou = "0.19"
+nannou_audio = "0.19"
+noise = "0.9"
+rand = "0.8"
