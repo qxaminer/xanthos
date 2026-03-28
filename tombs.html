@@ -13,27 +13,6 @@
             line-height: 1.7;
         }
 
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            padding: 18px 20px 10px;
-        }
-
-        .nav a {
-            color: #D4AF37;
-            text-decoration: none;
-            font-size: 0.95em;
-            letter-spacing: 0.4px;
-        }
-
-        .nav a:hover { color: #CE4F1A; }
-        .nav .easter-egg {
-            font-size: 0.75em;
-            color: #c7b8a0;
-            opacity: 0.7;
-        }
-        .nav .easter-egg:hover { color: #CE4F1A; opacity: 1; }
 
         .wrap {
             max-width: 860px;
@@ -83,14 +62,8 @@
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="story.html#ode-machines">Ode</a>
-        <a href="preview-egg.html">Curtain</a>
-        <a href="artClub.html">artClub</a>
-        <a href="tombs.html">Tombs</a>
-        <a class="easter-egg" href="pipeline.html" title="CATALOG → PORT">CATALOG ▸ PORT</a>
-    </nav>
+    <div id="nav-root"></div>
+    <script src="nav.js"></script>
     <div class="wrap">
         <h1>TOMBS OF THE PROPHETS</h1>
         <h2>XR Experience Pre-Plan</h2>

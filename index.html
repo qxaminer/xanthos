@@ -13,27 +13,6 @@
             padding: 20px;
         }
 
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            margin-bottom: 24px;
-        }
-
-        .nav a {
-            color: #CE4F1A;
-            text-decoration: none;
-            font-size: 0.95em;
-            letter-spacing: 0.4px;
-        }
-
-        .nav a:hover { color: #8B3010; }
-        .nav .easter-egg {
-            font-size: 0.75em;
-            color: #64748B;
-            opacity: 0.7;
-        }
-        .nav .easter-egg:hover { color: #CE4F1A; opacity: 1; }
         
         .logo-container {
             position: relative;
@@ -82,14 +61,8 @@
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="story.html#ode-machines">Ode</a>
-        <a href="preview-egg.html">Curtain</a>
-        <a href="artClub.html">artClub</a>
-        <a href="tombs.html">Tombs</a>
-        <a class="easter-egg" href="pipeline.html" title="CATALOG → PORT">CATALOG ▸ PORT</a>
-    </nav>
+    <div id="nav-root"></div>
+    <script src="nav.js"></script>
     <div class="logo-container">
         <img src="RUST_crab.png" alt="Rust Crab" class="logo-rust">
         <img src="Iron_crab.png" alt="Iron Crab" class="logo-iron">
