@@ -9,6 +9,8 @@ Cargo.lock
 
 # OS
 .DS_Store
+._.DS_Store
+._*
 
 # Binary assets (track separately if needed)
 *.docx
