@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Xanthos - CATALOG → PORT</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Minion Pro", Georgia, serif;
+            background: #0f1113;
+            color: #e9f4f5;
+            line-height: 1.7;
+        }
+
+        .wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        h1 {
+            color: #7dd3fc;
+            font-size: 2.4em;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            color: #5eead4;
+            margin: 28px 0 10px;
+            font-size: 1.4em;
+        }
+
+        pre {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(125, 211, 252, 0.2);
+            border-radius: 12px;
+            padding: 16px;
+            white-space: pre-wrap;
+            font-family: "SF Mono", Monaco, monospace;
+            font-size: 12px;
+        }
+
+        .hint {
+            color: #cbd5f5;
+            margin-top: 8px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Two-Phase Pipeline: CATALOG → PORT</h1>
+        <p class="hint">Easter egg: instruction scroll. It waits for the sketches.</p>
+
+        <h2>PHASE 1: CATALOG</h2>
+        <pre>I need you to build a two-phase pipeline: CATALOG then PORT.
+
+### PHASE 1: CATALOG
+
+1. Recursively scan `~/Projects/Processing/` (and any subdirectories) for all `.pde` files. If that path doesn't exist, ask me where my Processing sketches live.
+
+2. For each sketch found:
+   - Extract the sketch name (folder name or filename)
+   - Read the source and generate a one-line description of what it does
+   - Identify key features: uses 3D? audio? image assets? external libraries? mouse/keyboard interaction? data files?
+   - Classify complexity: simple (single file < 100 lines), medium (single file 100-500 lines or multi-file), complex (500+ lines, external deps, or multi-tab)
+
+3. Generate `sketch_catalog.json` with this structure:
+```json
+{
+  "scanned_at": "ISO timestamp",
+  "source_dir": "/path/scanned",
+  "sketches": [
+    {
+      "name": "sketch_name",
+      "path": "/full/path/to/sketch.pde",
+      "description": "One-line description",
+      "features": ["3d", "audio", "interaction", "data"],
+      "complexity": "simple|medium|complex",
+      "lines": 142,
+      "files": ["sketch.pde", "Particle.pde"],
+      "port_difficulty": "straightforward|moderate|needs_review",
+      "port_notes": "e.g. uses Minim audio library -- needs nannou_audio equivalent"
+    }
+  ]
+}
+```
+
+4. Build a single-file HTML viewer (`sketch_gallery.html`) that:
+   - Reads sketch_catalog.json (embedded or fetched)
+   - Displays each sketch as a rotating 3D card (CSS transforms, no library)
+   - Card front: sketch name, complexity badge, one-line description
+   - Card back: feature tags, file count, port difficulty rating
+   - Cards auto-rotate on hover, click to flip
+   - Grid layout, responsive, dark background
+   - Filter bar at top: filter by complexity, port difficulty, features
+   - No frameworks. Vanilla HTML/CSS/JS. Single file.
+
+### PHASE 2: PORT TO NANNOU
+
+5. Create a Rust workspace at `~/Projects/nannou-portfolio/` with:
+   - Top-level `Cargo.toml` as workspace
+   - Each sketch becomes a binary in `src/bin/{sketch_name}.rs`
+   - Shared utilities in `src/lib.rs` (color palettes, common math, etc.)
+
+6. For each sketch in the catalog, generate the Nannou port:
+   - `setup()` -> `model()` function returning a Model struct
+   - `draw()` -> `view()` function
+   - `mousePressed/keyPressed` -> nannou event handlers
+   - Processing `color()` -> nannou `rgb()` / `rgba()` / `hsla()`
+   - Processing `map()` -> nannou `map_range()`
+   - Processing `noise()` -> use the `noise` crate (add to dependencies)
+   - Processing `PVector` -> nannou `Vec2` / `Vec3`
+   - Processing `ArrayList<>` -> `Vec<>`
+   - Processing `class` -> Rust `struct` + `impl`
+   - `frameCount` -> `app.elapsed_frames()`
+   - `width/height` -> `app.window_rect()`
+   - `random()` -> `nannou::rand::random_range()`
+   - `millis()` -> `app.duration.since_start.as_millis()`
+
+7. Translation rules to follow strictly:
+   - Do NOT just comment-translate. Write idiomatic Rust.
+   - Use nannou's `Draw` API, not raw wgpu.
+   - If a Processing sketch uses a library with no Nannou equivalent, add a `// TODO: needs manual port -- [library] has no direct nannou equivalent` comment and stub the function.
+   - Each binary must compile. Run `cargo check` after generating each one.
+   - Preserve the visual intent of the original sketch. If the Processing version draws a particle system, the Nannou version should draw the same particle system, not an approximation.
+
+8. Generate a `PORT_REPORT.md` at the workspace root:
+   - Table: sketch name | status (ported/stubbed/skipped) | notes
+   - List any sketches that couldn't be auto-ported and why
+   - List all external crate dependencies added
+
+### CONSTRAINTS
+- Nannou version: use `nannou = "0.19"` (latest stable as of early 2026, verify with `cargo search nannou`)
+- Rust edition: 2021
+- Target: macOS ARM64 (Apple Silicon M4)
+- Do not use any nightly-only features
+- Run `cargo check --bins` at the end to verify everything compiles
+- If any binary fails to compile, fix it before moving on
+
+### OUTPUT
+When done, give me:
+1. The sketch_catalog.json
+2. The sketch_gallery.html (open it for me)
+3. The full nannou-portfolio workspace
+4. The PORT_REPORT.md summary
+
+Start with Phase 1. Show me the catalog and gallery before starting ports.</pre>
+    </div>
+</body>
+</html>

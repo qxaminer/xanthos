@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Xanthos - artClub</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Minion Pro", Georgia, serif;
+            background: #1a1a1a;
+            color: #f5efe6;
+            line-height: 1.8;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            padding: 18px 20px 10px;
+        }
+
+        .nav a {
+            color: #D4AF37;
+            text-decoration: none;
+            font-size: 0.95em;
+            letter-spacing: 0.4px;
+        }
+
+        .nav a:hover { color: #CE4F1A; }
+        .nav .easter-egg {
+            font-size: 0.75em;
+            color: #c7b8a0;
+            opacity: 0.7;
+        }
+        .nav .easter-egg:hover { color: #CE4F1A; opacity: 1; }
+
+        .wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        h1 {
+            color: #D4AF37;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.6em;
+        }
+
+        .panel {
+            background: rgba(250, 250, 250, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 26px;
+        }
+
+        .panel h2 {
+            color: #CE4F1A;
+            margin-bottom: 8px;
+        }
+
+        .panel a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+
+        .panel a:hover { color: #CE4F1A; }
+
+        .muted {
+            color: #c7b8a0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="story.html#ode-machines">Ode</a>
+        <a href="preview-egg.html">Curtain</a>
+        <a href="artClub.html">artClub</a>
+        <a href="tombs.html">Tombs</a>
+        <a class="easter-egg" href="pipeline.html" title="CATALOG → PORT">CATALOG ▸ PORT</a>
+    </nav>
+    <div class="wrap">
+        <h1>artClub</h1>
+        <div class="panel">
+            <h2>Original Processing Sketches</h2>
+            <p>
+                <a href="processing-sketches/index.html">Enter the sketches</a>
+            </p>
+            <p class="muted">Drop the original Processing exports into `processing-sketches/` and they will live here.</p>
+        </div>
+    </div>
+</body>
+</html>

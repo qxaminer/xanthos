@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Xanthos - Tombs of the Prophets</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Minion Pro", Georgia, serif;
+            background: #0f1113;
+            color: #e9f4f5;
+            line-height: 1.7;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            padding: 18px 20px 10px;
+        }
+
+        .nav a {
+            color: #D4AF37;
+            text-decoration: none;
+            font-size: 0.95em;
+            letter-spacing: 0.4px;
+        }
+
+        .nav a:hover { color: #CE4F1A; }
+        .nav .easter-egg {
+            font-size: 0.75em;
+            color: #c7b8a0;
+            opacity: 0.7;
+        }
+        .nav .easter-egg:hover { color: #CE4F1A; opacity: 1; }
+
+        .wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 30px 24px 90px;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            color: #7dd3fc;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #5eead4;
+            margin: 26px 0 10px;
+            font-size: 1.35em;
+        }
+
+        h3 {
+            color: #7dd3fc;
+            margin: 18px 0 8px;
+            font-size: 1.1em;
+        }
+
+        p { margin-bottom: 12px; }
+        ul { margin: 8px 0 12px 18px; }
+        li { margin-bottom: 6px; }
+        code, pre { font-family: "SF Mono", Monaco, monospace; }
+        pre {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(125, 211, 252, 0.2);
+            border-radius: 12px;
+            padding: 16px;
+            white-space: pre-wrap;
+            font-size: 12px;
+        }
+        .muted { color: #cbd5f5; font-style: italic; }
+        .scene {
+            margin: 18px 0 24px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(125, 211, 252, 0.2);
+            background: #090c10;
+        }
+        .scene canvas { display: block; width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="story.html#ode-machines">Ode</a>
+        <a href="preview-egg.html">Curtain</a>
+        <a href="artClub.html">artClub</a>
+        <a href="tombs.html">Tombs</a>
+        <a class="easter-egg" href="pipeline.html" title="CATALOG → PORT">CATALOG ▸ PORT</a>
+    </nav>
+    <div class="wrap">
+        <h1>TOMBS OF THE PROPHETS</h1>
+        <h2>XR Experience Pre-Plan</h2>
+
+        <p><strong>Concept:</strong> A WebXR pilgrimage to the burial/memorial site of every prophet across every tradition on earth, accessible to anyone with a phone and a $10 cardboard headset. The journey begins not on earth but in orbit, at the tomb of a prophet who hasn't been born yet.</p>
+
+        <h2>THE OPENING</h2>
+        <p>You float in low earth orbit. Below you, the planet. Around you, nothing but the hum of a station that doesn't exist yet.</p>
+        <p>In front of you: a tomb. Corten steel. Weathered. Oxidized like it's been here for centuries, which is impossible because you're in space. The tomb has no name. No dates. No inscription except a single glyph that your language doesn't have a character for.</p>
+        <p>This is Tomb Zero. The future prophet. Laid to rest off-planet because the earth they served was not the only earth.</p>
+        <p>You touch the tomb (tap the screen). The rust flakes. The camera pulls back. The earth fills your view. And then you fall toward it.</p>
+        <div class="scene" id="yahya-fall"></div>
+        <p>You land at your first earthbound tomb.</p>
+
+        <h2>SCOPE: "EVERY PROPHET EVER KNOWN"</h2>
+
+        <h3>Canonical Traditions (Named Prophets)</h3>
+        <p><strong>Hebrew Bible / Tanakh (Nevi'im)</strong></p>
+        <ul>
+            <li>Major: Isaiah, Jeremiah, Ezekiel, Daniel</li>
+            <li>Twelve Minor: Hosea, Joel, Amos, Obadiah, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, Malachi</li>
+            <li>Pre-classical: Moses, Aaron, Miriam, Samuel, Elijah, Elisha, Nathan, Gad, Deborah</li>
+            <li>Patriarchs-as-prophets: Abraham, Isaac, Jacob, Joseph</li>
+            <li>~48 prophets recognized in Talmudic tradition (Megillah 14a)</li>
+        </ul>
+
+        <p><strong>Islamic Tradition (Anbiya/Rusul)</strong></p>
+        <ul>
+            <li>25 named in Quran: Adam, Idris (Enoch), Nuh (Noah), Hud, Salih, Ibrahim (Abraham), Lut (Lot), Ismail, Ishaq, Yaqub, Yusuf, Ayyub (Job), Shu'ayb, Musa (Moses), Harun (Aaron), Dhul-Kifl, Dawud (David), Sulayman (Solomon), Ilyas (Elijah), Alyasa (Elisha), Yunus (Jonah), Zakariyya, Yahya (John), Isa (Jesus), Muhammad</li>
+            <li>Hadith tradition: 124,000 prophets sent to humanity (we represent this as a field of unnamed markers, not 124,000 individual tombs)</li>
+            <li>Known tomb sites: Cave of the Patriarchs (Hebron), Prophet's Mosque (Medina), numerous maqams across Middle East</li>
+        </ul>
+
+        <p><strong>Christian Tradition</strong></p>
+        <ul>
+            <li>OT prophets (shared with Judaism)</li>
+            <li>John the Baptist (tomb venerated in Umayyad Mosque, Damascus)</li>
+            <li>Jesus (Church of the Holy Sepulchre / Garden Tomb, Jerusalem)</li>
+            <li>Some traditions: apostles as prophetic figures</li>
+            <li>Marian apparition sites (prophetic encounters, not prophets per se -- include as waypoints?)</li>
+        </ul>
+
+        <p><strong>Zoroastrian</strong></p>
+        <ul>
+            <li>Zarathustra/Zoroaster (no confirmed tomb, tradition places him in Balkh, Afghanistan)</li>
+            <li>Saoshyant (future savior figures -- three of them, prophesied)</li>
+        </ul>
+
+        <p><strong>Baha'i Faith</strong></p>
+        <ul>
+            <li>The Bab (Shrine of the Bab, Haifa)</li>
+            <li>Baha'u'llah (Shrine of Baha'u'llah, Acre)</li>
+        </ul>
+
+        <p><strong>Mandaean</strong></p>
+        <ul>
+            <li>Yahya (John the Baptist, shared with Islam/Christianity)</li>
+        </ul>
+
+        <p><strong>Druze</strong></p>
+        <ul>
+            <li>Jethro/Shu'ayb (Nabi Shu'ayb, near Tiberias)</li>
+        </ul>
+
+        <p><strong>Manichaeism</strong></p>
+        <ul>
+            <li>Mani (died in Gundeshapur, Iran)</li>
+        </ul>
+
+        <p><strong>Indigenous / Oral Traditions</strong></p>
+        <ul>
+            <li>This is where it gets ethically complex.</li>
+            <li>Some are not meant to be named publicly.</li>
+            <li>Some have no "tomb" concept.</li>
+            <li>Representation requires consultation, not extraction.</li>
+            <li>Placeholder: "The Unnamed" -- a section of the experience acknowledging prophetic traditions that cannot or should not be catalogued by outsiders.</li>
+        </ul>
+
+        <p><strong>Modern / Contested</strong></p>
+        <ul>
+            <li>Joseph Smith (LDS, Sharon, Vermont birthplace / Nauvoo, Illinois)</li>
+            <li>Others as research surfaces them</li>
+        </ul>
+
+        <p class="muted">Total Estimated Named Sites: 80-120 unique locations. Represented-but-not-named traditions: dozens more.</p>
+
+        <h2>NARRATIVE STRUCTURE</h2>
+        <p>The experience is NOT a museum. It's a pilgrimage. The difference:</p>
+        <ul>
+            <li><strong>Museum:</strong> Here is information about this prophet.</li>
+            <li><strong>Pilgrimage:</strong> You walked here. You stood here. Something shifted.</li>
+        </ul>
+
+        <h3>Journey Arc</h3>
+        <pre>TOMB ZERO (orbit) -- the unnamed future
+    |
+    v
+DESCENT -- fall to earth, land at nearest prophet's tomb to user's GPS
+    |
+    v
+THE WALK -- move between tombs by tradition or geography (user chooses)
+    |
+    v
+CROSSINGS -- moments where traditions overlap at the same physical site
+    (Hebron, Jerusalem, Damascus -- prophets shared across faiths)
+    |
+    v
+THE UNNAMED -- a vast dark field of 124,000 lights
+    (the hadith number, the uncountable prophets of all traditions)
+    |
+    v
+RETURN TO ORBIT -- Tomb Zero again, but now you've walked the earth</pre>
+
+        <h3>Two Navigation Modes</h3>
+        <p><strong>Geographic:</strong> Walk the earth. Tombs appear where they physically are. You move between them like a pilgrim. Middle East is dense. Central Asia is sparse. The gaps are the experience.</p>
+        <p><strong>Tradition:</strong> Follow one thread. All the Hebrew prophets. All the Quranic prophets. Watch how they overlap, diverge, reconverge.</p>
+
+        <h2>AESTHETIC: SERRA IN SPACE</h2>
+        <ul>
+            <li>Every tomb rendered as Corten steel. Not marble. Not gold. Rust.</li>
+            <li>Richard Serra's vocabulary: massive curved planes, torqued ellipses, tilted arcs</li>
+            <li>The tombs are not decorative. They have WEIGHT even in zero-G.</li>
+            <li>Texture: photogrammetric rust, pitting, scale, patina</li>
+            <li>Lighting: sharp, directional, like Texas afternoon sun even in orbit</li>
+            <li>Sound: low frequency hum. Metal stress. Wind through gaps in steel.</li>
+            <li>No text floats in space. Information is revealed by proximity and touch.</li>
+            <li>The Corten weathers differently at each site -- desert tombs are dry-oxidized, coastal tombs show salt corrosion, the space tomb has a frost-burn patina that doesn't exist in nature</li>
+        </ul>
+
+        <h3>What This Is NOT</h3>
+        <ul>
+            <li>Not a glossy museum with floating info panels</li>
+            <li>Not gamified (no achievements, no collectibles)</li>
+            <li>Not educational-first (the learning is a consequence of the awe, not the other way around)</li>
+        </ul>
+
+        <h2>TECH STACK</h2>
+        <h3>Target Hardware</h3>
+        <ul>
+            <li>Floor: Google Cardboard / any phone-based VR holder</li>
+            <li>Ceiling: Quest 3, Vision Pro (progressive enhancement)</li>
+            <li>Middle: Phone AR without headset (hold-up-and-look mode)</li>
+        </ul>
+
+        <h3>Framework</h3>
+        <p><strong>Astro</strong> (static site generator) as the shell:</p>
+        <ul>
+            <li>Pre-renders each tomb as its own page/route</li>
+            <li>Handles the content layer (prophet data, tradition metadata, site coordinates)</li>
+            <li>Static-first means it loads fast on bad connections (pilgrimage sites often have bad cell service -- ironic requirement but real)</li>
+            <li>Islands architecture: only the XR viewport is interactive JS</li>
+        </ul>
+        <p><strong>A-Frame</strong> (WebXR framework built on Three.js):</p>
+        <ul>
+            <li>Battle-tested for Cardboard-tier WebVR</li>
+            <li>Declarative HTML-like components</li>
+            <li>Large ecosystem of community components</li>
+            <li>Works in mobile browser with WebXR polyfill</li>
+            <li>Handles the 3D rendering, spatial audio, interaction</li>
+        </ul>
+
+        <h3>Content Layer</h3>
+        <ul>
+            <li>Each prophet: JSON record with name, tradition(s), dates, coordinates, tomb description, shared-with references</li>
+            <li>GeoJSON for mapping mode</li>
+            <li>Astro content collections for the data</li>
+        </ul>
+
+        <h3>Assets</h3>
+        <ul>
+            <li>Corten steel materials: procedural shader (noise-based rust) rather than heavy textures</li>
+            <li>Keeps download size small for mobile</li>
+            <li>Each tomb geometry: parametric, generated from a seed value unique to the prophet</li>
+            <li>No two tombs look the same but they're all clearly from the same vocabulary</li>
+            <li>Serra's curves, but each one computed, not hand-modeled</li>
+        </ul>
+
+        <h3>Progressive Enhancement Tiers</h3>
+        <pre>| Tier | Device | Experience |
+|------|--------|------------|
+| 1 | Cardboard + phone | Stereoscopic 3D, head tracking, tap interaction |
+| 2 | Phone AR (no headset) | Camera passthrough, tombs overlaid on real world |
+| 3 | Quest / standalone | Full 6DOF, hand tracking, walk-around |
+| 4 | Vision Pro | Spatial computing, mixed reality, highest fidelity |
+| Fallback | Any browser | 2D interactive map with 3D tomb viewer embedded |</pre>
+
+        <h2>DATA ARCHITECTURE</h2>
+        <pre>/content/
+  prophets/
+    adam.json
+    ibrahim.json
+    moses.json
+    ...
+  traditions/
+    hebrew.json
+    islamic.json
+    christian.json
+    zoroastrian.json
+    bahai.json
+    unnamed.json       # placeholder for traditions that resist cataloguing
+  sites/
+    hebron.json        # Cave of the Patriarchs -- shared by 3+ traditions
+    medina.json
+    damascus.json
+    ...
+  crossings/           # where traditions physically overlap
+    hebron-crossing.json
+    jerusalem-crossing.json</pre>
+
+        <p>Each prophet record:</p>
+        <pre>{
+  "id": "ibrahim",
+  "names": {
+    "hebrew": "Avraham",
+    "arabic": "Ibrahim",
+    "english": "Abraham"
+  },
+  "traditions": ["hebrew", "islamic", "christian", "bahai"],
+  "tomb_site": "hebron",
+  "coordinates": [31.5243, 35.1107],
+  "tomb_confirmed": true,
+  "tomb_seed": 7,
+  "serra_params": {
+    "curve_type": "torqued_ellipse",
+    "height_m": 4.2,
+    "wall_count": 2,
+    "lean_degrees": 3.1,
+    "patina": "desert_dry"
+  },
+  "shared_with": ["ishaq", "yaqub", "sarah", "rebekah", "leah"],
+  "notes": "Cave of Machpelah. Purchased by Abraham per Genesis 23. Venerated in all three Abrahamic traditions. One of the most contested sacred sites on earth."
+}</pre>
+
+        <h2>ETHICAL GUARDRAILS</h2>
+        <ol>
+            <li>No tradition is presented as more valid than another. The Corten steel is the equalizer. Every prophet gets the same material vocabulary.</li>
+            <li>Indigenous/oral traditions are acknowledged, not extracted. "The Unnamed" section exists specifically to honor what should not be catalogued without permission.</li>
+            <li>Shared prophets are rendered ONCE at their physical site with crossing indicators showing which traditions claim them. The user experiences the overlap, not the argument.</li>
+            <li>No tomb is "empty" or "false." If a tradition holds a site sacred, it's sacred in the experience. Historicity debates are not the point.</li>
+            <li>The future prophet (Tomb Zero) belongs to no tradition. It's a question, not an answer.</li>
+            <li>Consultation required before launch: Reach out to scholars/practitioners in each tradition for accuracy review. Budget time and money for this. It's not optional.</li>
+        </ol>
+
+        <h2>BUILD PHASES</h2>
+        <h3>Phase 0: Proof of Concept (2-3 weeks)</h3>
+        <ul>
+            <li>Astro + A-Frame scaffold</li>
+            <li>One tomb: Tomb Zero in orbit</li>
+            <li>Corten steel procedural shader</li>
+            <li>Cardboard-compatible WebXR</li>
+            <li>Test on your phone with a $10 headset</li>
+            <li>Deliverable: you float in space, you see the tomb, you touch it, you fall</li>
+        </ul>
+
+        <h3>Phase 1: Earth Landing (3-4 weeks)</h3>
+        <ul>
+            <li>5 tombs: Abraham (Hebron), Moses (Mt. Nebo), Muhammad (Medina), Jesus (Jerusalem), Zarathustra (Balkh)</li>
+            <li>Geographic navigation between them</li>
+            <li>Descent animation from orbit</li>
+            <li>Fallback 2D map view</li>
+            <li>Content collection structure in Astro</li>
+        </ul>
+
+        <h3>Phase 2: Full Abrahamic (6-8 weeks)</h3>
+        <ul>
+            <li>All Hebrew, Islamic, Christian named prophets</li>
+            <li>Crossing system for shared sites</li>
+            <li>Tradition-based navigation mode</li>
+            <li>Spatial audio (wind, metal stress, site-specific ambience)</li>
+            <li>Progressive enhancement for Quest/Vision Pro</li>
+        </ul>
+
+        <h3>Phase 3: Beyond Abrahamic + The Unnamed (4-6 weeks)</h3>
+        <ul>
+            <li>Zoroastrian, Baha'i, Mandaean, Druze, Manichaean</li>
+            <li>"The Unnamed" -- 124,000 lights field</li>
+            <li>Ethical review with tradition consultants</li>
+            <li>Performance optimization for the full dataset</li>
+        </ul>
+
+        <h3>Phase 4: Polish + Ship</h3>
+        <ul>
+            <li>Loading experience (the fall from orbit as loading screen)</li>
+            <li>Offline mode (progressive web app for actual pilgrimage use)</li>
+            <li>Accessibility (screen reader mode for 2D fallback, audio descriptions)</li>
+            <li>Documentation</li>
+        </ul>
+
+        <h2>OPEN QUESTIONS</h2>
+        <ol>
+            <li><strong>Tomb Zero glyph:</strong> What is it? A character from no existing script? A procedurally generated symbol? Something from your Hebrew studies that points forward?</li>
+            <li><strong>The 124,000:</strong> Render as particle field? As sound? As a constellation viewed from orbit before descent? All three?</li>
+            <li><strong>User's own tradition:</strong> Does the experience ask? Does it affect the journey order? Or is everyone equal -- no personalization, just pilgrimage?</li>
+            <li><strong>Serra estate:</strong> The aesthetic is inspired by, not replicating specific works. But worth noting the reference openly in credits rather than dancing around it.</li>
+            <li><strong>Monetization:</strong> Free? Donation-based? Grant-funded? This is the kind of project NEA/NEH digital humanities grants exist for. Also fits Sundance New Frontier.</li>
+            <li><strong>Name:</strong> Working title "Tombs of the Prophets" is descriptive. But it could be sharper. Hebrew: "Kivrei HaNevi'im" (קברי הנביאים) -- which is also literally a site in Jerusalem (the ancient burial caves on the Mount of Olives). That collision is interesting.</li>
+        </ol>
+
+        <h2>WHAT THIS IS REALLY ABOUT</h2>
+        <p>Everyone argues about whose prophet is real. Whose book is right. Whose tomb is holy.</p>
+        <p>You put them all in the same rust. Same weight. Same material. Same gravity.</p>
+        <p>And you start the whole thing with someone who doesn't exist yet. In a place no one's been buried.</p>
+        <p>The argument dissolves in the oxidation.</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <script>
+        const container = document.getElementById("yahya-fall");
+        const sketch = (p) => {
+            let stars = [];
+            let t = 0;
+
+            p.setup = () => {
+                const w = container.clientWidth || 800;
+                const h = Math.max(260, Math.floor(w * 0.45));
+                const canvas = p.createCanvas(w, h);
+                canvas.parent(container);
+                for (let i = 0; i < 140; i++) {
+                    stars.push({
+                        x: p.random(w),
+                        y: p.random(h * 0.7),
+                        r: p.random(0.5, 1.8),
+                        a: p.random(120, 255)
+                    });
+                }
+            };
+
+            p.windowResized = () => {
+                const w = container.clientWidth || 800;
+                const h = Math.max(260, Math.floor(w * 0.45));
+                p.resizeCanvas(w, h);
+            };
+
+            p.draw = () => {
+                t += 0.01;
+                p.background(8, 12, 18);
+
+                // stars
+                p.noStroke();
+                stars.forEach((s, i) => {
+                    const flicker = 0.5 + 0.5 * Math.sin(t + i);
+                    p.fill(120, 180, 220, s.a * flicker);
+                    p.circle(s.x, s.y, s.r);
+                });
+
+                // moon (dark side)
+                const moonX = p.width * 0.8;
+                const moonY = p.height * 0.2;
+                const moonR = p.width * 0.2;
+                p.fill(20, 22, 28);
+                p.circle(moonX, moonY, moonR);
+                p.fill(12, 14, 18, 220);
+                p.circle(moonX + moonR * 0.18, moonY - moonR * 0.05, moonR * 0.95);
+
+                // earth glow
+                const earthX = p.width * 0.15;
+                const earthY = p.height * 0.9;
+                const earthR = p.width * 0.28;
+                p.fill(20, 60, 90, 80);
+                p.circle(earthX, earthY, earthR);
+
+                // falling figure
+                const fallX = p.width * 0.55;
+                const fallY = p.height * 0.25 + (p.height * 0.55) * (0.5 + 0.5 * Math.sin(t * 0.8));
+                p.stroke(160, 220, 255, 180);
+                p.strokeWeight(1);
+                for (let i = 0; i < 6; i++) {
+                    p.line(fallX + i * 2, fallY - 30 - i * 6, fallX + i * 2, fallY - 60 - i * 10);
+                }
+                p.noStroke();
+                p.fill(230, 240, 255);
+                p.circle(fallX, fallY, 6);
+
+                // Yahya's tomb
+                const tombX = p.width * 0.6;
+                const tombY = p.height * 0.85;
+                const tombW = p.width * 0.22;
+                const tombH = p.height * 0.12;
+                p.fill(110, 62, 40);
+                p.rect(tombX - tombW / 2, tombY - tombH, tombW, tombH, 6);
+                p.fill(180, 110, 70, 120);
+                p.rect(tombX - tombW / 2 + 6, tombY - tombH + 6, tombW - 12, tombH - 12, 4);
+
+                p.fill(200, 230, 255, 180);
+                p.textAlign(p.CENTER, p.TOP);
+                p.textSize(12);
+                p.text("Yahya's tomb", tombX, tombY + 4);
+            };
+        };
+        new p5(sketch);
+    </script>
+</body>
+</html>

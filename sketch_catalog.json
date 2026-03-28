@@ -1,0 +1,3612 @@
+{
+  "scanned_at": "2026-02-04T12:30:52.077Z",
+  "source_dir": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing",
+  "sketches": [
+    {
+      "name": "animatedPoly",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod6/animatedPoly/animatedPoly.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "medium",
+      "lines": 62,
+      "files": [
+        "animatedPoly.pde",
+        "poly.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "ant0",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/ant0/ant0.pde",
+      "description": "Auto-cycle every 3 seconds",
+      "features": [
+        "interaction",
+        "data"
+      ],
+      "complexity": "medium",
+      "lines": 127,
+      "files": [
+        "ant0.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "arrayBarChart2_pde",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/arrayBarChart2_pde/arrayBarChart2_pde.pde",
+      "description": "Processing sketch with audio, interaction, data, libraries.",
+      "features": [
+        "audio",
+        "interaction",
+        "data",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 318,
+      "files": [
+        "arrayBarChart2_pde.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: java, external"
+    },
+    {
+      "name": "arrayLoops",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/arrayLoops/arrayLoops.pde",
+      "description": "TODO  how to flash the negative space on this",
+      "features": [],
+      "complexity": "simple",
+      "lines": 55,
+      "files": [
+        "arrayLoops.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "assign4",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/assign4/assign4.pde",
+      "description": "Line 1: 0 degrees",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 235,
+      "files": [
+        "ConeConnect.pde",
+        "assign4.pde",
+        "drawCube.pde",
+        "drawEllipse.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "assign4 2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/assign4 2/ConeConnect.pde",
+      "description": "Line 1: 0 degrees",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 235,
+      "files": [
+        "ConeConnect.pde",
+        "assign4.pde",
+        "drawCube.pde",
+        "drawEllipse.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "assignment2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod2/assignment2/assignment2.pde",
+      "description": "outer blue",
+      "features": [],
+      "complexity": "medium",
+      "lines": 15,
+      "files": [
+        "assignment2.pde",
+        "assignment2try2.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "assignment2final",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/assignment2final/assignment2final.pde",
+      "description": "White padding",
+      "features": [],
+      "complexity": "simple",
+      "lines": 27,
+      "files": [
+        "assignment2final.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "Barfield_6310_FINAL",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/Barfield_6310_FINAL/Barfield_6310_FINAL.pde",
+      "description": "goellersPlunge with Kaleidoscope Background",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 794,
+      "files": [
+        "Barfield_6310_FINAL.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "Barfield_ZenithTrig3",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/Barfield_ZenithTrig3/Barfield_ZenithTrig3.pde",
+      "description": "Celestial Trigonometry with Rotating Zodiac for Dallas, Texas",
+      "features": [
+        "3d",
+        "interaction",
+        "data"
+      ],
+      "complexity": "complex",
+      "lines": 652,
+      "files": [
+        "Barfield_ZenithTrig3.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "bartonspring_dusk_ink",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/bartonspring_dusk_ink/bartonspring_dusk_ink.pde",
+      "description": "Processing sketch with image, libraries.",
+      "features": [
+        "image",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 28,
+      "files": [
+        "bartonspring_dusk_ink.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "batAnim",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/batAnim/batAnim.pde",
+      "description": "Audio processing",
+      "features": [
+        "3d",
+        "audio",
+        "image",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 464,
+      "files": [
+        "batAnim.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "batAnim",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/dataXpress/batAnim/batAnim/batAnim.pde",
+      "description": "Processing sketch with audio, image, libraries.",
+      "features": [
+        "audio",
+        "image",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 345,
+      "files": [
+        "batAnim.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: java, external"
+    },
+    {
+      "name": "batAnim2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/dataXpress/batAnim2/batAnim2.pde",
+      "description": "flight parameters",
+      "features": [
+        "3d",
+        "audio",
+        "image",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 89,
+      "files": [
+        "batAnim2.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "batAnimC2POV",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/dataXpress/batAnim/batAnimC2POV/batAnimC2POV.pde",
+      "description": "3D mesh for the redwood image",
+      "features": [
+        "3d",
+        "audio",
+        "image",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 448,
+      "files": [
+        "batAnimC2POV.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "batAnimClaude",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/dataXpress/batAnim/batAnimClaude/batAnimClaude/batAnimClaude.pde",
+      "description": "First-person camera",
+      "features": [
+        "3d",
+        "audio",
+        "image",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 325,
+      "files": [
+        "batAnimClaude.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "batAnimOai",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/dataXpress/batAnim/batAnimOai/batAnimOai.pde",
+      "description": "Processing sketch with audio, image, libraries.",
+      "features": [
+        "audio",
+        "image",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 339,
+      "files": [
+        "batAnimOai.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: java, external"
+    },
+    {
+      "name": "batAnimProj4",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/dataXpress/batAnimProj4/batAnimProj4.pde",
+      "description": "Background",
+      "features": [
+        "3d",
+        "audio",
+        "image",
+        "interaction",
+        "data",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 406,
+      "files": [
+        "batAnimProj4.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: java, external"
+    },
+    {
+      "name": "blinkranday",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/blinkranday.pde",
+      "description": "Randomly parametrized rectangle program",
+      "features": [],
+      "complexity": "medium",
+      "lines": 92,
+      "files": [
+        "Devlocalgit.pde",
+        "blinkranday.pde",
+        "creative_coding.pde",
+        "drawRect.pde",
+        "initEllipse.pde",
+        "initRect.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "blinkrandayai",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkrandayai/blinkrandayai.pde",
+      "description": "Randomly parametrized rectangle program",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 163,
+      "files": [
+        "Devlocalgit.pde",
+        "blinkrandayai.pde",
+        "creative_coding.pde",
+        "drawRect.pde",
+        "initEllipse.pde",
+        "initRect.pde",
+        "program_01.pde",
+        "program_02.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "blockyexample",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod4/blockyexample/blockyexample.pde",
+      "description": "block function",
+      "features": [],
+      "complexity": "medium",
+      "lines": 77,
+      "files": [
+        "blocky2.pde",
+        "blockyexample.pde",
+        "bloky.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "BugMoon",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/BugMoon/BugMoon.pde",
+      "description": "Radial symmetry and mathematical patterns in celestial mechanics",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 507,
+      "files": [
+        "BugMoon.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "bugMoon2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/bugMoon2/bugMoon2.pde",
+      "description": "Radial symmetry and mathematical patterns in celestial mechanics",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 484,
+      "files": [
+        "bugMoon2.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "captainFlatFaceDuex",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/captainFlatFaceDuex/captainFlatFaceDuex.pde",
+      "description": "Captain Flatface meets the third dimension",
+      "features": [
+        "3d",
+        "image"
+      ],
+      "complexity": "simple",
+      "lines": 73,
+      "files": [
+        "captainFlatFaceDuex.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "circleFlickerBrick",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/vbrilliance/circleFlickerBrick/circleFlickerBrick.pde",
+      "description": "Flickering Rectangle Effect",
+      "features": [],
+      "complexity": "simple",
+      "lines": 27,
+      "files": [
+        "circleFlickerBrick.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "colorGpt",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/colorGpt/colorGpt.pde",
+      "description": "Define the square area",
+      "features": [],
+      "complexity": "simple",
+      "lines": 41,
+      "files": [
+        "colorGpt.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "combinedExistentialDread",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/combinedExistentialDread/combinedExistentialDread.pde",
+      "description": "Pat Barfield",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 49,
+      "files": [
+        "combinedExistentialDread.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "combinedExistentialDread",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod7midterm/combinedExistentialDread/combinedExistentialDread.pde",
+      "description": "Pat Barfield",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 59,
+      "files": [
+        "combinedExistentialDread.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "cusomtRect1",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/cusomtRect1/cusomtRect1.pde",
+      "description": "global scope  -  built-in function",
+      "features": [],
+      "complexity": "medium",
+      "lines": 33,
+      "files": [
+        "cusomtRect1.pde",
+        "myEllipse.pde",
+        "myRect.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "customRect",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod4/customRect/customRect.pde",
+      "description": "built in function",
+      "features": [],
+      "complexity": "medium",
+      "lines": 28,
+      "files": [
+        "customRect.pde",
+        "myEllipse.pde",
+        "myRect.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "defNestPrimVars",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/defNestPrimVars/defNestPrimVars.pde",
+      "description": "Randomly parametrized rectangle program",
+      "features": [],
+      "complexity": "simple",
+      "lines": 41,
+      "files": [
+        "defNestPrimVars.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "dreadArray",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/dreadArray/dreadArray.pde",
+      "description": "Pat Barfield",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 82,
+      "files": [
+        "dreadArray.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "dreadArray",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod7midterm/dreadArray/dreadArray.pde",
+      "description": "Pat Barfield",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 82,
+      "files": [
+        "dreadArray.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "existentialDread",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/existentialDread/existentialDread.pde",
+      "description": "Pat Barfield",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 41,
+      "files": [
+        "existentialDread.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "existentialDread",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod7midterm/existentialDread/existentialDread.pde",
+      "description": "Pat Barfield",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 41,
+      "files": [
+        "existentialDread.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "existentialDread1",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/existentialDread1/existentialDread1.pde",
+      "description": "Floating 3D box of chaos",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 56,
+      "files": [
+        "existentialDread1.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "existentialDread2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod7midterm/existentialDread2/existentialDread2.pde",
+      "description": "Pat Barfield",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 41,
+      "files": [
+        "existentialDread2.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "existentialDreadMod_pde",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/existentialDreadMod_pde/existentialDreadMod_pde.pde",
+      "description": "//anigashimoz egg",
+      "features": [
+        "audio",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 21,
+      "files": [
+        "aimagochiPod.pde",
+        "existentialDreadMod_pde.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "fallingBlocks",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/fallingBlocks/fallingBlocks.pde",
+      "description": "Processing sketch with interaction.",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 198,
+      "files": [
+        "Block.pde",
+        "Cell.pde",
+        "fallingBlocks.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "faveTorus",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/faveTorus/faveTorus.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 213,
+      "files": [
+        "faveTorus.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "FINAL2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/FINAL2/FINAL2.pde",
+      "description": "goellersPlunge with Kaleidoscope Background - FIXED VERSION",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 794,
+      "files": [
+        "FINAL2.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "FINAL3",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/FINAL3/FINAL3.pde",
+      "description": "goellersPlunge with Kaleidoscope Background - FIXED VERSION",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 908,
+      "files": [
+        "FINAL3.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "FINAL5",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/FINAL5/FINAL5.pde",
+      "description": "goellersPlunge with Kaleidoscope Background - FIXED VERSION",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 946,
+      "files": [
+        "FINAL5.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "FINAL6",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/FINAL6/FINAL6.pde",
+      "description": "goellersPlunge with Kaleidoscope Background - FIXED VERSION",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 1014,
+      "files": [
+        "FINAL6.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "FINAL7",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/FINAL7/FINAL7.pde",
+      "description": "goellersPlunge with Kaleidoscope Background v.7",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 1027,
+      "files": [
+        "FINAL7.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "FINALinheritance",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/FINALinheritance/FINALinheritance.pde",
+      "description": "goellersPlunge with Kaleidoscope Background - STABLE VERSION",
+      "features": [
+        "3d",
+        "interaction",
+        "data"
+      ],
+      "complexity": "complex",
+      "lines": 996,
+      "files": [
+        "FINALinheritance.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "FINALinheritance2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/FINALinheritance2/FINALinheritance2.pde",
+      "description": "goellersPlunge with Kaleidoscope Background - STABLE VERSION",
+      "features": [
+        "3d",
+        "interaction",
+        "data"
+      ],
+      "complexity": "complex",
+      "lines": 996,
+      "files": [
+        "FINALinheritance2.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "FINALv8",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/FINALv8/FINALv8.pde",
+      "description": "goellersPlunge with Kaleidoscope Background - FIXED VERSION",
+      "features": [
+        "3d",
+        "interaction",
+        "data"
+      ],
+      "complexity": "complex",
+      "lines": 1218,
+      "files": [
+        "FINALv8.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "fireOR",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/fireOR/fireOR.pde",
+      "description": "connection / triangle -----------------------------------------------------",
+      "features": [],
+      "complexity": "medium",
+      "lines": 153,
+      "files": [
+        "fireOR.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "firstFlicker",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/firstFlicker/firstFlicker.pde",
+      "description": "El Vertex",
+      "features": [],
+      "complexity": "simple",
+      "lines": 32,
+      "files": [
+        "firstFlicker.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "flicker",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod4/flicker/flicker.pde",
+      "description": " //need all three to draw",
+      "features": [],
+      "complexity": "medium",
+      "lines": 28,
+      "files": [
+        "bloky.pde",
+        "flicker.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "flocka",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/dataXpress/flocka/flocka.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 2,
+      "files": [
+        "flocka.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "Flocking",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/dataXpress/flocka/Flocking/Flocking.pde",
+      "description": "The Boid class",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 255,
+      "files": [
+        "Boid.pde",
+        "Flock.pde",
+        "Flocking.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "GenesisProbe",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod3/GenesisProbe/GenesisProbe.pde",
+      "description": "connection / triangle -----------------------------------------------------",
+      "features": [],
+      "complexity": "medium",
+      "lines": 148,
+      "files": [
+        "GenesisProbe.pde",
+        "drawSquare.pde",
+        "initSquare.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "gimbalLock",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/gimbalLock/gimbalLock.pde",
+      "description": "Mathematical Breakthroughs: How We Solved Division by Zero and Other \"Impossibilities\"",
+      "features": [
+        "3d",
+        "interaction",
+        "data"
+      ],
+      "complexity": "complex",
+      "lines": 560,
+      "files": [
+        "gimbalLock.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "goellersPlunge",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/Mod13/goellersPlunge/goellersPlunge.pde",
+      "description": "TAB 7: AmbiguousFigure",
+      "features": [
+        "3d",
+        "audio",
+        "image",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 690,
+      "files": [
+        "AmbiguousFigure.pde",
+        "Dim3.pde",
+        "KeyholeCube.pde",
+        "LiquidPool.pde",
+        "MoonSystem.pde",
+        "SceneSphere.pde",
+        "ServerRacks.pde",
+        "Toroid.pde",
+        "goellersPlunge.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "goellersPlunge2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/Mod13/goellersPlunge2/goellersPlunge2.pde",
+      "description": "TAB 7: AmbiguousFigure",
+      "features": [
+        "3d",
+        "audio",
+        "image",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 811,
+      "files": [
+        "AmbiguousFigure.pde",
+        "Dim3.pde",
+        "KeyholeCube.pde",
+        "LiquidPool.pde",
+        "MoonSystem.pde",
+        "SceneSphere.pde",
+        "ServerRacks.pde",
+        "Toroid.pde",
+        "goellersPlunge2.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "goellersPlunge2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/goellersPlunge2/goellersPlunge2.pde",
+      "description": "TAB 7: AmbiguousFigure",
+      "features": [
+        "3d",
+        "audio",
+        "image",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 811,
+      "files": [
+        "AmbiguousFigure.pde",
+        "Dim3.pde",
+        "KeyholeCube.pde",
+        "LiquidPool.pde",
+        "MoonSystem.pde",
+        "SceneSphere.pde",
+        "ServerRacks.pde",
+        "Toroid.pde",
+        "goellersPlunge2.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "goellersPlunge2Kaleid",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/goellersPlunge2Kaleid/goellersPlunge2Kaleid.pde",
+      "description": "TAB 7: AmbiguousFigure",
+      "features": [
+        "3d",
+        "audio",
+        "image",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 811,
+      "files": [
+        "AmbiguousFigure.pde",
+        "Dim3.pde",
+        "KeyholeCube.pde",
+        "LiquidPool.pde",
+        "MoonSystem.pde",
+        "SceneSphere.pde",
+        "ServerRacks.pde",
+        "Toroid.pde",
+        "goellersPlunge2Kaleid.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "goellersPlunge3pink",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/goellersPlunge3pink/goellersPlunge3pink.pde",
+      "description": "TAB 7: AmbiguousFigure",
+      "features": [
+        "3d",
+        "audio",
+        "image",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 811,
+      "files": [
+        "AmbiguousFigure.pde",
+        "Dim3.pde",
+        "KeyholeCube.pde",
+        "LiquidPool.pde",
+        "MoonSystem.pde",
+        "SceneSphere.pde",
+        "ServerRacks.pde",
+        "Toroid.pde",
+        "goellersPlunge3pink.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "goellersPlungeSatMoon",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/Mod13/goellersPlungeSatMoon/goellersPlungeSatMoon.pde",
+      "description": "TAB 7: AmbiguousFigure",
+      "features": [
+        "3d",
+        "audio",
+        "image",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 762,
+      "files": [
+        "AmbiguousFigure.pde",
+        "Dim3.pde",
+        "KeyholeCube.pde",
+        "LiquidPool.pde",
+        "MoonSystem.pde",
+        "SatelliteMoon.pde",
+        "ServerRacks.pde",
+        "Toroid.pde",
+        "goellersPlungeSatMoon.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "gpt5_1_projectMapper",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/gpt5_1_projectMapper/gpt5_1_projectMapper.pde",
+      "description": "Color = Novelty, Size = Impact, Outline/Risk = Alignment themes",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 581,
+      "files": [
+        "gpt5_1_projectMapper.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "hairGrowthEx",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/hairGrowthEx/hairGrowthEx.pde",
+      "description": "GrowingHair.pde  — click to regrow a fresh hairstyle",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 85,
+      "files": [
+        "hairGrowthEx.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "harmonichromaTopsInegratia",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/harmonichromaTopsInegratia/harmonichromaTopsInegratia.pde",
+      "description": "HARMONICHROMATOPSIA - Audio Capture with OSC Output",
+      "features": [
+        "audio",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 230,
+      "files": [
+        "harmonichromaTopsInegratia.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "hunt",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/hunt/hunt.pde",
+      "description": "// Basic GeoTools approach",
+      "features": [
+        "3d",
+        "image",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 255,
+      "files": [
+        "hunt.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: org, java"
+    },
+    {
+      "name": "hunt2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/hunt2/hunt2.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 2,
+      "files": [
+        "hunt2.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "icoCombine2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/icoCombine2/icoCombine2.pde",
+      "description": "3D Ship Tractor-Beam to Morphing Icosphere",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 238,
+      "files": [
+        "icoCombine2.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "icosphere",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/icosphere/icosphere.pde",
+      "description": "Processing sketch with 3d, interaction.",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 243,
+      "files": [
+        "UVsphere.pde",
+        "icosphere.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "icoTractorCombine",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/icoTractorCombine/icoTractorCombine.pde",
+      "description": "Combined 3D Sphere with Tractor-Beam",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 584,
+      "files": [
+        "Barfeidl_icoTractor.pde",
+        "icoTractorCombine.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "Inheritance",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/Inheritance/Inheritance.pde",
+      "description": "default constructor",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 160,
+      "files": [
+        "BaseClass.pde",
+        "DerivedClass01.pde",
+        "DerivedClass02.pde",
+        "DerivedClass03.pde",
+        "DerivedClass04.pde",
+        "Inheritance.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "initTorus",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/initTorus/initTorus.pde",
+      "description": "Draw Torus at origin",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 80,
+      "files": [
+        "initTorus.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "interactionDraw",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/interactionDraw/interactionDraw.pde",
+      "description": "Processing sketch with interaction, data, libraries.",
+      "features": [
+        "interaction",
+        "data",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 98,
+      "files": [
+        "interactionDraw.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "jamBud0",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/jamBud0/jamBud0.pde",
+      "description": "ARRAYS: Your data containers",
+      "features": [
+        "3d",
+        "audio",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 96,
+      "files": [
+        "jamBud0.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "javaKing",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/javaKing/javaKing/javaKing.pde",
+      "description": "Spiral Mandala - Geometry extracted from your drawing",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 93,
+      "files": [
+        "javaKing.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "javaKing2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/javaKing2/javaKing2.pde",
+      "description": "Spiral Mandala - Alternating Band Fade Control",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 121,
+      "files": [
+        "javaKing2.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "Kaleidescope_Hourglass",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/Kaleidescope_Hourglass/Kaleidescope_Hourglass.pde",
+      "description": "Kaleidoscopic Flow Field + Pulsing + Hourglass",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 143,
+      "files": [
+        "Kaleidescope_Hourglass.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "kaleidThree",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/kaleidThree/sketch_250517z.pde",
+      "description": "Kaleidoscopic Flow Field + Pulsing + Reversible Hourglass + Pixel Burst",
+      "features": [
+        "3d",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 180,
+      "files": [
+        "sketch_250517z.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: java"
+    },
+    {
+      "name": "kaleidTwo",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/kaleidTwo/sketch_250517y.pde",
+      "description": "Kaleidoscopic Flow Field + Pulsing + Hourglass",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 143,
+      "files": [
+        "sketch_250517y.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "Lasurius",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/CRCP6390/Lasurius/Lasurius.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 2,
+      "files": [
+        "Lasurius.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "liveMod8",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/liveMod8/liveMod8.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 2,
+      "files": [
+        "liveMod8.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mandalaFinal",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mandalaFinal/mandalaFinal.pde",
+      "description": "draw 6 spirals with SAME theta and radius",
+      "features": [],
+      "complexity": "simple",
+      "lines": 32,
+      "files": [
+        "mandalaFinal.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mandalaProj",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod6/mandalaProj/mandalaProj.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "medium",
+      "lines": 71,
+      "files": [
+        "mandalaProj.pde",
+        "poly.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "marsMoon",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/marsMoon/marsMoon.pde",
+      "description": "orbital angles",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 112,
+      "files": [
+        "marsMoon.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mod10prac",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod10prac/mod10prac.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "medium",
+      "lines": 78,
+      "files": [
+        "Poly.pde",
+        "mod10prac.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "Mod14",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/Mod14/Mod14.pde",
+      "description": "ok to assign object of a derived class to a variable of its base class",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 27,
+      "files": [
+        "BaseClass.pde",
+        "DerivedClass01.pde",
+        "Mod14.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mod1projFLashAI",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod1projFLashAI/mod1projFLashAI.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 49,
+      "files": [
+        "mod1projFLashAI.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod4Prac",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod4Prac/mod4Prac.pde",
+      "description": "block function",
+      "features": [],
+      "complexity": "medium",
+      "lines": 97,
+      "files": [
+        "blocky.pde",
+        "mod4Prac.pde",
+        "myEllipse.pde",
+        "myRect.pde",
+        "myVertex.pde",
+        "poly.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod4projVertexGen",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod4/mod4projVertexGen/mod4projVertexGen.pde",
+      "description": "block function",
+      "features": [],
+      "complexity": "medium",
+      "lines": 82,
+      "files": [
+        "blocky2.pde",
+        "bloky.pde",
+        "mod4projVertexGen.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod5ex",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod5/mod5ex/mod5ex.pde",
+      "description": "draw the polygon",
+      "features": [],
+      "complexity": "medium",
+      "lines": 38,
+      "files": [
+        "mod5ex.pde",
+        "myPolygon.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod5proj",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod5/mod5proj/mod5proj.pde",
+      "description": "draw the polygon",
+      "features": [],
+      "complexity": "medium",
+      "lines": 46,
+      "files": [
+        "mod5proj.pde",
+        "myPolygon.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod6liveSession",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod6liveSession/mod6liveSession.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 36,
+      "files": [
+        "mod6liveSession.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod6textureDemo",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod6textureDemo/mod6textureDemo.pde",
+      "description": "Processing sketch with image.",
+      "features": [
+        "image"
+      ],
+      "complexity": "simple",
+      "lines": 30,
+      "files": [
+        "mod6textureDemo.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod7midterm",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod7midterm/mod7midterm.pde",
+      "description": "Floating 3D box of chaos",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 53,
+      "files": [
+        "existentialDread.pde",
+        "mod7midterm.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mod8",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod8/mod8.pde",
+      "description": "parallel arrays of dynamics properties",
+      "features": [],
+      "complexity": "medium",
+      "lines": 108,
+      "files": [
+        "mod8.pde",
+        "poly.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod8assignment",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod8assignment/mod8assignment.pde",
+      "description": "Mod 8 Assignment: Particle System",
+      "features": [],
+      "complexity": "medium",
+      "lines": 109,
+      "files": [
+        "mod8assignment.pde",
+        "poly.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod8particle",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod8particleSim/mod8particle/mod8particle.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "medium",
+      "lines": 136,
+      "files": [
+        "mod8particle.pde",
+        "particleFlow.pde",
+        "poly.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod8transformMatrices",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod8transformMatrices/mod8transformMatrices.pde",
+      "description": "these transformation functions change",
+      "features": [],
+      "complexity": "simple",
+      "lines": 9,
+      "files": [
+        "mod8transformMatrices.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod9",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod9/mod9.pde",
+      "description": "parallel arrays of dynamics properties",
+      "features": [],
+      "complexity": "medium",
+      "lines": 108,
+      "files": [
+        "mod9.pde",
+        "poly.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod9assign2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod9assign2/mod9assign2.pde",
+      "description": "Create a 3x3 grid of panels, each with a simple sphere",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 62,
+      "files": [
+        "mod9assign2.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mod9assign3",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod9assign3/mod9assign3.pde",
+      "description": "Default constructor",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 476,
+      "files": [
+        "FlashingTorus.pde",
+        "MovingShape.pde",
+        "Panel.pde",
+        "Timer.pde",
+        "mod9assign3.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mod9assignTorus",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod9assignTorus/mod9assignTorus.pde",
+      "description": "Our first class - represents one panel in the grid",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 271,
+      "files": [
+        "Panel.pde",
+        "mod9assignTorus.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mod9assignTry4",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod9assignTry4/mod9assignTry4.pde",
+      "description": "Default constructor",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 482,
+      "files": [
+        "FlashingTorus.pde",
+        "MovingShape.pde",
+        "Panel.pde",
+        "Timer.pde",
+        "mod9assignTry4.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mod9assignTry5",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod9assignTry5/mod9assignTry5.pde",
+      "description": "Default constructor",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 484,
+      "files": [
+        "FlashingTorus.pde",
+        "MovingShape.pde",
+        "Panel.pde",
+        "Timer.pde",
+        "mod9assignTry5.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mod9particleSystem02",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod9particleSystem02/mod9particleSystem02.pde",
+      "description": "Mod9 Assignment: Weather System",
+      "features": [
+        "3d",
+        "data"
+      ],
+      "complexity": "medium",
+      "lines": 118,
+      "files": [
+        "mod9particleSystem02.pde",
+        "poly.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mod9particleWeatherSys",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod9particleWeatherSys/mod9particleWeatherSys.pde",
+      "description": "Map grid position to image coordinates",
+      "features": [
+        "3d",
+        "image",
+        "interaction",
+        "data"
+      ],
+      "complexity": "medium",
+      "lines": 212,
+      "files": [
+        "getWeatherIntensity.pde",
+        "mod9particleWeatherSys.pde",
+        "poly.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mod9rainParticle",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod9rainParticle/mod9rainParticle.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 2,
+      "files": [
+        "mod9rainParticle.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "mod9torusZero",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod9torusZero/mod9torusZero.pde",
+      "description": "STEP 6: Complete sketch with timers, events, and infinity symbol",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 406,
+      "files": [
+        "mod9torusZero.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mod9torusZeroDot",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod9torusZeroDot/mod9torusZeroDot.pde",
+      "description": "STEP 6: Complete sketch with timers, events, and infinity symbol",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 409,
+      "files": [
+        "mod9torusZeroDot.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "MoonOrbitalMech1",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/MoonOrbitalMech1/MoonOrbitalMech1.pde",
+      "description": "load your own textures into the data folder",
+      "features": [
+        "3d",
+        "image"
+      ],
+      "complexity": "simple",
+      "lines": 89,
+      "files": [
+        "MoonOrbitalMech1.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "mushroom_1",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mushroom_1/mushroom_1.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 2,
+      "files": [
+        "mushroom_1.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "nudge_sym",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/nudge_sym/nudge_sym.pde",
+      "description": "x, y, w, h",
+      "features": [],
+      "complexity": "simple",
+      "lines": 24,
+      "files": [
+        "nudge_sym.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "ode2gaboLinear1",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/ode2gaboLinear1/ode2gaboLinear1.pde",
+      "description": "Gabo Linear Construction No. 2 - Morphing from Parabolas",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 208,
+      "files": [
+        "ode2gaboLinear1.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "ode2phong",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/ode2phong/ode2phong.pde",
+      "description": "Processing sketch with 3d, image.",
+      "features": [
+        "3d",
+        "image"
+      ],
+      "complexity": "medium",
+      "lines": 452,
+      "files": [
+        "ode2phong.pde",
+        "phong2.pde",
+        "phong3.pde",
+        "phong4_reverseCone.pde",
+        "revisedPhong.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "OOP_06_3D",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/OOP_06_3D/OOP_06_3D.pde",
+      "description": "2 ways to create a sphere",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 274,
+      "files": [
+        "CRCPSphere.pde",
+        "Dim3.pde",
+        "GeomDynamics.pde",
+        "GeomStyle.pde",
+        "OOP_06_3D.pde",
+        "Poly.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "OOP_07_3D",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/Mod13/OOP_07_3D/OOP_07_3D.pde",
+      "description": "Processing sketch with 3d, data.",
+      "features": [
+        "3d",
+        "data"
+      ],
+      "complexity": "medium",
+      "lines": 426,
+      "files": [
+        "CRCPSphere.pde",
+        "CRCPToroid.pde",
+        "Dim3.pde",
+        "GeomDynamics.pde",
+        "GeomStyle.pde",
+        "OOP_07_3D.pde",
+        "Poly.pde",
+        "ToroidDetail.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "OOP_07_3D",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/OOP_07_3D/OOP_07_3D.pde",
+      "description": "Processing sketch with 3d, data.",
+      "features": [
+        "3d",
+        "data"
+      ],
+      "complexity": "medium",
+      "lines": 426,
+      "files": [
+        "CRCPSphere.pde",
+        "CRCPToroid.pde",
+        "Dim3.pde",
+        "GeomDynamics.pde",
+        "GeomStyle.pde",
+        "OOP_07_3D.pde",
+        "Poly.pde",
+        "ToroidDetail.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "orangePlunge",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/orangePlunge/orangePlunge.pde",
+      "description": "Combined Kaleidoscopic Moon Scene",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 804,
+      "files": [
+        "orangePlunge.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "parallax",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/parallax/parallax.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 27,
+      "files": [
+        "parallax.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "parallax_sim",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/parallax_sim/parallax_sim.pde",
+      "description": "Draw stars",
+      "features": [],
+      "complexity": "simple",
+      "lines": 32,
+      "files": [
+        "parallax_sim.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "partFail1",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/partFail1/partFail1.pde",
+      "description": "// Olive and Sword Collision Simulation",
+      "features": [
+        "3d",
+        "interaction",
+        "data"
+      ],
+      "complexity": "complex",
+      "lines": 580,
+      "files": [
+        "partFail1.pde",
+        "partTry2.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "partFailedSwirl",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/partFailedSwirl/partFailedSwirl.pde",
+      "description": "3D Olive and Sword Fluid Dynamics Simulation",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 543,
+      "files": [
+        "partFailedSwirl.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "partFgpt",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/partFgpt/partFgpt.pde",
+      "description": "Processing sketch with 3d, image.",
+      "features": [
+        "3d",
+        "image"
+      ],
+      "complexity": "simple",
+      "lines": 73,
+      "files": [
+        "partFgpt.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "particlePin",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/particlePin/particlePin.pde",
+      "description": "Particle constrained within ellipse",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 137,
+      "files": [
+        "particlePin.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "partMartOliveMesh",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/partMartOliveMesh/partMartOliveMesh.pde",
+      "description": "3D Martini Glass Olive Piercing Simulation",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "complex",
+      "lines": 702,
+      "files": [
+        "partMartOliveMesh.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "partSysSwordOlive",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/partSysSwordOlive/partSysSwordOlive.pde",
+      "description": "MartiniSwordOlives.pde",
+      "features": [
+        "3d",
+        "image",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 213,
+      "files": [
+        "partSysSwordOlive.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "pB_windward",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/pB_windward/pB_windward.pde",
+      "description": "Kaleidoscopic Flow Field + Pulsing + Hourglass",
+      "features": [
+        "3d",
+        "audio",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 241,
+      "files": [
+        "pB_windward.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "pBdieOnThisHill",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/papaBear/pBdieOnThisHill/pBdieOnThisHill.pde",
+      "description": "Kaleidoscopic Flow Field + Pulsing + Hourglass",
+      "features": [
+        "3d",
+        "audio",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 218,
+      "files": [
+        "pBdieOnThisHill.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "phongOde",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/phongOde/phongOde.pde",
+      "description": "Processing sketch with 3d, image.",
+      "features": [
+        "3d",
+        "image"
+      ],
+      "complexity": "medium",
+      "lines": 161,
+      "files": [
+        "phongOde.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "pilotFeed",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/pilotFeed/pilotFeed.pde",
+      "description": " // Initialize webcam",
+      "features": [
+        "image",
+        "data",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 89,
+      "files": [
+        "pilotFeed.pde",
+        "vid.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "pk3",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/pk3/pk3.pde",
+      "description": "Spiral Mandala - Alternating Band Fade Control",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 163,
+      "files": [
+        "pk3.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "pk4",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/pk4/pk4.pde",
+      "description": "Spiral Mandala - Color Bands with Teeth & Crown",
+      "features": [
+        "image",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 234,
+      "files": [
+        "pk4.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "pkTired",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/pkTired/pkTired.pde",
+      "description": "Spiral Mandala - Audio Reactive King",
+      "features": [
+        "audio",
+        "image",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 310,
+      "files": [
+        "pkTired.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "PODD401_points",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/PODD401_points/PODD401_points.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 67,
+      "files": [
+        "PODD401_points.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "PODD401_pointsV2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/PODD401_pointsV2/PODD401_pointsV2.pde",
+      "description": "This sketch creates a visual composition combining:",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 218,
+      "files": [
+        "PODD401_pointsV2.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "poopSketchrg",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/poopSketchrg/poopSketchrg.pde",
+      "description": "All the inline-comment jokes will live here",
+      "features": [
+        "3d",
+        "image",
+        "data"
+      ],
+      "complexity": "simple",
+      "lines": 82,
+      "files": [
+        "poopSketchrg.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "popDist01",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/popDist01/popDist01.pde",
+      "description": "Initialize P with starting populations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 48,
+      "files": [
+        "popDist01.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "popPeasy",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/popPeasy/popPeasy.pde",
+      "description": "Simulated population heatmap values",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 60,
+      "files": [
+        "popPeasy.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "popSleap",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/popSleap/popSleap.pde",
+      "description": "Processing sketch with 3d, interaction.",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 75,
+      "files": [
+        "popSleap.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "portWon",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/portWon/portWon.pde",
+      "description": "the rusty Valhalla borne",
+      "features": [],
+      "complexity": "simple",
+      "lines": 2,
+      "files": [
+        "portWon.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "projMap_GPT5_1_v2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/projMap_GPT5_1_v2/projMap_GPT5_1_v2.pde",
+      "description": "Color = novelty, Size = impact, + marks = early-stage/\"failure\"",
+      "features": [
+        "interaction",
+        "data"
+      ],
+      "complexity": "medium",
+      "lines": 414,
+      "files": [
+        "projMap_GPT5_1_v2.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "pushPopEx",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/pushPopEx/pushPopEx.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 19,
+      "files": [
+        "pushPopEx.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "quantTry",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/quantTry/quantTry.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 43,
+      "files": [
+        "quantTry.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "rainPart2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/rainPart2/rainPart2.pde",
+      "description": "Weather map integration",
+      "features": [
+        "3d",
+        "image",
+        "interaction",
+        "data"
+      ],
+      "complexity": "medium",
+      "lines": 186,
+      "files": [
+        "rainPart2.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "rgbStudy",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/rgbStudy/rgbStudy.pde",
+      "description": "// red circle",
+      "features": [],
+      "complexity": "simple",
+      "lines": 52,
+      "files": [
+        "rgbStudy.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "rotate_play",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/rotate_play/rotate_play.pde",
+      "description": "Clear screen with white",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 51,
+      "files": [
+        "rotate_play.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "rotatingSimple",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/rotatingSimple/sketch_250522b.pde",
+      "description": "ParentSelfPortrait_v3.pde",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 64,
+      "files": [
+        "sketch_250522b.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "selfPortEx",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/selfPortEx/selfPortEx.pde",
+      "description": "luqy_self_portrait.pde",
+      "features": [
+        "image",
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 43,
+      "files": [
+        "selfPortEx.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "selfPortExSwitching",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/selfPortExSwitching/selfPortExSwitching.pde",
+      "description": " FaceGenerator.pde ‑ click to spawn a fresh procedural portrait",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 146,
+      "files": [
+        "selfPortExSwitching.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "selfPortraitFinal",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/selfPortraitFinal/selfPortraitFinal.pde",
+      "description": "the next image flip should occur.",
+      "features": [
+        "image"
+      ],
+      "complexity": "simple",
+      "lines": 46,
+      "files": [
+        "selfPortraitFinal.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "simeractor",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/simeractor/simeractor.pde",
+      "description": "Processing sketch with 3d, interaction.",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 94,
+      "files": [
+        "simeractor.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sinWave",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sinWave/sinWave.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 32,
+      "files": [
+        "sinWave.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250513c",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/ode2phong/sketch_250513c/sketch_250513c.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 125,
+      "files": [
+        "sketch_250513c.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250513d",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/ode2phong/sketch_250513d/sketch_250513d.pde",
+      "description": "Processing sketch with 3d, image.",
+      "features": [
+        "3d",
+        "image"
+      ],
+      "complexity": "medium",
+      "lines": 231,
+      "files": [
+        "phongNight.pde",
+        "sketch_250513d.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250515aitangleslow",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250515aitangleslow/sketch_250515aitangleslow.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 48,
+      "files": [
+        "sketch_250515aitangleslow.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250515b",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/tools/dev/sketch_250515b/sketch_250515b.pde",
+      "description": "Color Shift",
+      "features": [
+        "data"
+      ],
+      "complexity": "medium",
+      "lines": 207,
+      "files": [
+        "ColorSwatchSquares.pde",
+        "ColorWheel.pde",
+        "RandomColorRotatedTriangle.pde",
+        "sketch_250515b.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250515bLerpLowPass",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250515bLerpLowPass/sketch_250515bLerpLowPass.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 62,
+      "files": [
+        "sketch_250515bLerpLowPass.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250515cbliss",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250515cbliss/sketch_250515cbliss.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 91,
+      "files": [
+        "sketch_250515cbliss.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250515daTractorBeam",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/sketch_250515daTractorBeam/sketch_250515daTractorBeam.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "medium",
+      "lines": 128,
+      "files": [
+        "sketch_250515daTractorBeam.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250515e",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/airt/sketch_250515e/sketch_250515e.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "medium",
+      "lines": 149,
+      "files": [
+        "sketch_250515e.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250515f",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250515f/captFlatface.pde",
+      "description": "Captain Flatface meets the third dimension",
+      "features": [
+        "3d",
+        "image"
+      ],
+      "complexity": "simple",
+      "lines": 81,
+      "files": [
+        "captFlatface.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250515fail",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250515fail/sketch_250515fail.pde",
+      "description": "Flickering Rectangle Effect",
+      "features": [],
+      "complexity": "medium",
+      "lines": 53,
+      "files": [
+        "dd.pde",
+        "sketch_250515fail.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250515g",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkrandayai/sketch_250515g/sketch_250515g.pde",
+      "description": "Flickering Rectangle Effect",
+      "features": [],
+      "complexity": "simple",
+      "lines": 27,
+      "files": [
+        "sketch_250515g.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516a",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/sketch_250516a/sketch_250516a.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "medium",
+      "lines": 264,
+      "files": [
+        "sketch_250516a.pde",
+        "zta.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516b",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/fairt/sketch_250516b/sketch_250516b.pde",
+      "description": "Player agents",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 150,
+      "files": [
+        "sketch_250516b.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516d",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/airt/sketch_250516d/sketch_250516d.pde",
+      "description": "Color transition for the shimmering pink Easter egg",
+      "features": [
+        "audio",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 133,
+      "files": [
+        "sketch_250516d.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "sketch_250516eCheese",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250516eCheese/sketch_250516eCheese.pde",
+      "description": "Color transition for the shimmering pink Easter egg",
+      "features": [
+        "audio",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 133,
+      "files": [
+        "sketch_250516eCheese.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "sketch_250516f",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516f/sketch_250516f.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 67,
+      "files": [
+        "sketch_250516f.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516g",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516g/sketch_250516g.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 62,
+      "files": [
+        "sketch_250516g.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516hLerpCalm",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516hLerpCalm/sketch_250516hLerpCalm.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 67,
+      "files": [
+        "sketch_250516hLerpCalm.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516i",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516i/sketch_250516i.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 91,
+      "files": [
+        "sketch_250516i.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516iOGcalm",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516iOGcalm/sketch_250516iOGcalm.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 91,
+      "files": [
+        "sketch_250516iOGcalm.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516jGenesisProbe",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516jGenesisProbe/sketch_250516jGenesisProbe.pde",
+      "description": "connection / triangle -----------------------------------------------------",
+      "features": [],
+      "complexity": "medium",
+      "lines": 140,
+      "files": [
+        "sketch_250516jGenesisProbe.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516kuestionsLater",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516kuestionsLater/sketch_250516kuestionsLater.pde",
+      "description": "connection / triangle -----------------------------------------------------",
+      "features": [],
+      "complexity": "medium",
+      "lines": 138,
+      "files": [
+        "sketch_250516kuestionsLater.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516l",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516l/sketch_250516l.pde",
+      "description": "connection / triangle -----------------------------------------------------",
+      "features": [],
+      "complexity": "medium",
+      "lines": 153,
+      "files": [
+        "sketch_250516l.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516mNullFunctBugEx",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516mNullFunctBugEx/sketch_250516mNullFunctBugEx.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 242,
+      "files": [
+        "sketch_250516mNullFunctBugEx.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516n",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516n/sketch_250516n.pde",
+      "description": "--- Speeds ------------------------------------------------------ //modelcom",
+      "features": [
+        "3d",
+        "audio",
+        "data",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 250,
+      "files": [
+        "sketch_250516n.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "sketch_250516oProbe406",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516oProbe406/sketch_250516oProbe406.pde",
+      "description": " MINI‑GAME v3 ‑ Added:",
+      "features": [
+        "3d",
+        "audio",
+        "data",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 250,
+      "files": [
+        "sketch_250516oProbe406.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "sketch_250516pTODO",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/sketch_250516pTODO/sketch_250516pTODO.pde",
+      "description": " MINI‑GAME v4",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 291,
+      "files": [
+        "sketch_250516pTODO.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250516tBOLDissue",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/fairt/sketch_250516tBOLDissue/sketch_250516tBOLDissue.pde",
+      "description": "Processing sketch with 3d, interaction, libraries.",
+      "features": [
+        "3d",
+        "interaction",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 345,
+      "files": [
+        "sketch_250516tBOLDissue.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: processing"
+    },
+    {
+      "name": "sketch_250517aMoon",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517aMoon/sketch_250517aMoon.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 54,
+      "files": [
+        "sketch_250517aMoon.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517bMoon",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517bMoon/sketch_250517bMoon.pde",
+      "description": "load your own textures into the data folder",
+      "features": [
+        "3d",
+        "image"
+      ],
+      "complexity": "simple",
+      "lines": 79,
+      "files": [
+        "sketch_250517bMoon.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517da9grid",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517da9grid/sketch_250517da9grid.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 107,
+      "files": [
+        "sketch_250517da9grid.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517e",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517e/sketch_250517e.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 132,
+      "files": [
+        "sketch_250517e.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517g",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517g/sketch_250517g.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 163,
+      "files": [
+        "sketch_250517g.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517h",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517h/sketch_250517h.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 173,
+      "files": [
+        "sketch_250517h.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517i",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517i/sketch_250517i.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 207,
+      "files": [
+        "sketch_250517i.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517jPrettyGood",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517jPrettyGood/sketch_250517jPrettyGood.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 212,
+      "files": [
+        "sketch_250517jPrettyGood.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517kTops",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517kTops/sketch_250517kTops.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 212,
+      "files": [
+        "sketch_250517kTops.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517n",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517n/sketch_250517n.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 243,
+      "files": [
+        "sketch_250517n.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517o",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517o/sketch_250517o.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 241,
+      "files": [
+        "sketch_250517o.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517r",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517r/sketch_250517r.pde",
+      "description": "Loop over grid positions",
+      "features": [],
+      "complexity": "simple",
+      "lines": 42,
+      "files": [
+        "sketch_250517r.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517ulorenz",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517ulorenz/sketch_250517ulorenz.pde",
+      "description": "Lorenz Attractor 3D Visualization",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 63,
+      "files": [
+        "sketch_250517ulorenz.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517v",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517v/sketch_250517v.pde",
+      "description": "Two-strand Lorenz Attractor “Weave” in 3D",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 101,
+      "files": [
+        "sketch_250517v.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517wLorenz4",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517wLorenz4/sketch_250517wLorenz4.pde",
+      "description": "Cross-woven Lorenz Attractors",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 81,
+      "files": [
+        "sketch_250517wLorenz4.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250517xGreatScottKal",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250517xGreatScottKal/sketch_250517xGreatScottKal.pde",
+      "description": "Kaleidoscopic Flow Field",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 70,
+      "files": [
+        "sketch_250517xGreatScottKal.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250518a",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod7arrayPrac/sketch_250518a/sketch_250518a.pde",
+      "description": "Now safe to access array elements",
+      "features": [],
+      "complexity": "simple",
+      "lines": 20,
+      "files": [
+        "sketch_250518a.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250522c",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250522c/sketch_250522c.pde",
+      "description": "ParentSelfPortrait_v4.pde",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 57,
+      "files": [
+        "sketch_250522c.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250522e",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_250522e/sketch_250522e.pde",
+      "description": "ParentSelfPortrait_v6.pde",
+      "features": [
+        "interaction",
+        "data"
+      ],
+      "complexity": "simple",
+      "lines": 77,
+      "files": [
+        "sketch_250522e.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_250613a",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod7/sketch_250613a/sketch_250613a.pde",
+      "description": "the permana",
+      "features": [],
+      "complexity": "simple",
+      "lines": 13,
+      "files": [
+        "sketch_250613a.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_27JAN2026",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_27JAN2026/sketch_27JAN2026.pde",
+      "description": "Finite Discursion Map: No-Error Version",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 74,
+      "files": [
+        "sketch_27JAN2026.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_fuzzyface",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_fuzzyface/sketch_fuzzyface.pde",
+      "description": "grayscale value determines the . size pixelrep",
+      "features": [
+        "image"
+      ],
+      "complexity": "simple",
+      "lines": 25,
+      "files": [
+        "sketch_fuzzyface.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sketch_orderOps",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sketch_orderOps/sketch_orderOps.pde",
+      "description": "x,y,w,h",
+      "features": [],
+      "complexity": "simple",
+      "lines": 9,
+      "files": [
+        "sketch_orderOps.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "slowTangle2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/mod7midterm/slowTangle2/slowTangle2.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 48,
+      "files": [
+        "slowTangle2.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "slowTangle2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/slowTangle2/slowTangle2.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 48,
+      "files": [
+        "slowTangle2.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "someShallPass",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/someShallPass/someShallPass.pde",
+      "description": "--- Speeds ------------------------------------------------------ //modelcom",
+      "features": [
+        "3d",
+        "audio",
+        "data",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 250,
+      "files": [
+        "someShallPass.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "spacewing",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/spacewing/spacewing.pde",
+      "description": "propulsion",
+      "features": [
+        "audio",
+        "data",
+        "libraries"
+      ],
+      "complexity": "complex",
+      "lines": 32,
+      "files": [
+        "spacewing.pde"
+      ],
+      "port_difficulty": "needs_review",
+      "port_notes": "Uses libraries: external"
+    },
+    {
+      "name": "speedHeightSim",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/speedHeightSim/speedHeightSim.pde",
+      "description": "Simulated dataset",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 46,
+      "files": [
+        "speedHeightSim.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "sphereX",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sphereX/sphereX.pde",
+      "description": "Processing sketch with 3d, interaction.",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 15,
+      "files": [
+        "sphereX.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "sphereXanimated",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/sphereXanimated/sphereXanimated.pde",
+      "description": "Time-based animation variables",
+      "features": [
+        "3d"
+      ],
+      "complexity": "simple",
+      "lines": 30,
+      "files": [
+        "sphereXanimated.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "station_08166200",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/station_08166200/station_08166200.pde",
+      "description": "flocking birds",
+      "features": [],
+      "complexity": "simple",
+      "lines": 21,
+      "files": [
+        "station_08166200.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "stellar_1AB",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/stellar_1AB/stellar_1AB.pde",
+      "description": "Processing sketch with core drawing primitives.",
+      "features": [],
+      "complexity": "simple",
+      "lines": 2,
+      "files": [
+        "stellar_1AB.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "tangleFour",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/tangleFour/tangleFour.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 91,
+      "files": [
+        "tangleFour.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "tangleThree",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/blinkranday/lerp/tangleThree/tangleThree.pde",
+      "description": "Global declarations",
+      "features": [],
+      "complexity": "simple",
+      "lines": 62,
+      "files": [
+        "tangleThree.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "test",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/test/test.pde",
+      "description": "Test different approaches",
+      "features": [],
+      "complexity": "simple",
+      "lines": 69,
+      "files": [
+        "test.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "thalatta_cubed",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/thalatta_cubed/thalatta_cubed.pde",
+      "description": "Thallata's Cube",
+      "features": [],
+      "complexity": "simple",
+      "lines": 2,
+      "files": [
+        "thalatta_cubed.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "the_import_of_import",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/the_import_of_import/the_import_of_import.pde",
+      "description": "CRCP6310 Mod 12",
+      "features": [],
+      "complexity": "simple",
+      "lines": 8,
+      "files": [
+        "the_import_of_import.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "theEarthPoop",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/theEarthPoop/theEarthPoop.pde",
+      "description": "Processing sketch with 3d, image.",
+      "features": [
+        "3d",
+        "image"
+      ],
+      "complexity": "simple",
+      "lines": 22,
+      "files": [
+        "theEarthPoop.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "torusIntersecting",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/torusIntersecting/torusIntersecting.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 241,
+      "files": [
+        "torusIntersecting.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "torusNine",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/torusNine/torusNine.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 132,
+      "files": [
+        "torusNine.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "TorusSlingshot",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/TorusSlingshot/TorusSlingshot.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 107,
+      "files": [
+        "TorusSlingshot.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "torusTwo",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/torusTwo/torusTwo.pde",
+      "description": "Processing sketch with 3d.",
+      "features": [
+        "3d"
+      ],
+      "complexity": "medium",
+      "lines": 241,
+      "files": [
+        "torusTwo.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "trigBrainStorm",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/trigBrainStorm/trigBrainStorm.pde",
+      "description": "radial syymetry",
+      "features": [],
+      "complexity": "simple",
+      "lines": 22,
+      "files": [
+        "trigBrainStorm.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "WASm",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/WASm/WASm.pde",
+      "description": "Processing sketch with interaction.",
+      "features": [
+        "interaction"
+      ],
+      "complexity": "simple",
+      "lines": 8,
+      "files": [
+        "WASm.pde"
+      ],
+      "port_difficulty": "straightforward",
+      "port_notes": ""
+    },
+    {
+      "name": "ZenithSingAKAgimbalLock",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/ZenithSingAKAgimbalLock/ZenithSingAKAgimbalLock.pde",
+      "description": "Mathematical Breakthroughs: How We Solved Division by Zero and Other \"Impossibilities\"",
+      "features": [
+        "3d",
+        "interaction",
+        "data"
+      ],
+      "complexity": "complex",
+      "lines": 560,
+      "files": [
+        "ZenithSingAKAgimbalLock.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "zenithTrig",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/zenithTrig/zenithTrig.pde",
+      "description": "Radial symmetry and mathematical patterns in celestial mechanics",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 344,
+      "files": [
+        "zenithTrig.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "ZenithTrig2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/ZenithTrig2/ZenithTrig2.pde",
+      "description": "Enhanced Radial symmetry and mathematical patterns in celestial mechanics",
+      "features": [
+        "3d",
+        "interaction"
+      ],
+      "complexity": "medium",
+      "lines": 488,
+      "files": [
+        "ZenithTrig2.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "ZenithTrig3",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/ZenithTrig3/ZenithTrig3.pde",
+      "description": "Enhanced Celestial Trigonometry with Rotating Zodiac for Dallas, Texas",
+      "features": [
+        "3d",
+        "interaction",
+        "data"
+      ],
+      "complexity": "complex",
+      "lines": 652,
+      "files": [
+        "ZenithTrig3.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "ZenithTrigBug",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/ZenithTrigBug/ZenithTrigBug.pde",
+      "description": "Real-Time Celestial Trigonometry with Astronomical Data for Dallas, Texas",
+      "features": [
+        "3d",
+        "interaction",
+        "data"
+      ],
+      "complexity": "complex",
+      "lines": 949,
+      "files": [
+        "ZenithTrigBug.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    },
+    {
+      "name": "ZenithTrigBug2",
+      "path": "/Users/verofield/dev/veroFields/portfolio/src/sketches/Processing/ZenithTrigBug2/ZenithTrigBug2.pde",
+      "description": "Enhanced Celestial Trigonometry with Rotating Zodiac for Dallas, Texas",
+      "features": [
+        "3d",
+        "interaction",
+        "data"
+      ],
+      "complexity": "complex",
+      "lines": 960,
+      "files": [
+        "ZenithTrigBug2.pde"
+      ],
+      "port_difficulty": "moderate",
+      "port_notes": ""
+    }
+  ]
+}

@@ -11,6 +11,28 @@
             text-align: center;
             padding: 20px;
         }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+
+        .nav a {
+            color: #CE4F1A;
+            text-decoration: none;
+            font-size: 0.95em;
+            letter-spacing: 0.4px;
+        }
+
+        .nav a:hover { color: #8B3010; }
+        .nav .easter-egg {
+            font-size: 0.75em;
+            color: #64748B;
+            opacity: 0.7;
+        }
+        .nav .easter-egg:hover { color: #CE4F1A; opacity: 1; }
         
         .logo-container {
             position: relative;
@@ -49,16 +71,32 @@
         h1 { font-size: 3em; margin: 0; }
         .tagline { font-size: 1.5em; color: #CE4F1A; margin: 20px 0; }
         .subtitle { color: #64748B; }
+        .story-link {
+            display: inline-block;
+            margin-top: 18px;
+            color: #CE4F1A;
+            text-decoration: none;
+        }
+        .story-link:hover { color: #8B3010; }
     </style>
 </head>
 <body>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="story.html#ode-machines">Ode</a>
+        <a href="preview-egg.html">Curtain</a>
+        <a href="artClub.html">artClub</a>
+        <a href="tombs.html">Tombs</a>
+        <a class="easter-egg" href="pipeline.html" title="CATALOG → PORT">CATALOG ▸ PORT</a>
+    </nav>
     <div class="logo-container">
         <img src="RUST_crab.png" alt="Rust Crab" class="logo-rust">
         <img src="Iron_crab.png" alt="Iron Crab" class="logo-iron">
     </div>
     <h1>Xanthos</h1>
     <p class="tagline">Learn Rust by converting Processing</p>
-    <p class="subtitle">Building in public. Coming soon.</p>
-    <p><a href="mailto:xanthos@gmail.com">Get notified</a></p>
+    <p class="subtitle">Building in public. The curtain is already open.</p>
+    <p><a class="story-link" href="story.html">Read the tale</a></p>
+    <p><a href="mailto:xanthos@gmail.com?subject=Get%20Notified&body=Hi%20Xanthos%2C%20would%20you%20like%20to%20add%20me%20to%20the%20list%3F">Get notified</a></p>
 </body>
 </html>
