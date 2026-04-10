@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nik³ — توزیع سیاسی محتوا</title>
+
+  <!-- Vazirmatn: canonical Persian web font for RTL rendering.
+       Loaded from Google Fonts; Tahoma/Arial as offline fallback. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap">
+
+  <!-- Chart.js — no build step required -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    /* -----------------------------------------------------------------------
+       Reset & base
+    ----------------------------------------------------------------------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --card-alt: #1c2128;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --muted: #8b949e;
+      --font-fa: 'Vazirmatn', Tahoma, Arial, sans-serif;
+      --font-en: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      font-family: var(--font-fa);
+      direction: rtl;
+      text-align: right;
+      background: var(--bg);
+      color: var(--text);
+      padding: 1.25rem 1rem;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      direction: rtl;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    .last-updated {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin: 0.35rem 0 1.2rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       Language toggle button
+    ----------------------------------------------------------------------- */
+    #lang-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-family: inherit;
+      color: var(--text);
+      transition: background 0.15s, color 0.15s;
+      z-index: 1000;
+      letter-spacing: 0.02em;
+    }
+
+    #lang-toggle:hover { background: var(--card-alt); color: #fff; }
+
+    /* -----------------------------------------------------------------------
+       TASK 6 COLOR GRAMMAR — Political register badge colors (exact spec)
+       - regime_aligned : #c0392b  (Iran country red)
+       - diaspora        : #27ae60  (green — exile press)
+       - reformist       : #2980b9  (other-countries blue)
+       - international   : #7f8c8d  (neutral grey)
+       - independent     : #8e44ad  (people purple)
+       - state_adjacent  : #e67e22  (organizations orange)
+    ----------------------------------------------------------------------- */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;          /* exact spec: padding 2px 8px */
+      border-radius: 4px;        /* exact spec: 4px border radius */
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #fff;               /* exact spec: white text */
+      white-space: nowrap;
+      direction: rtl;
+    }
+
+    .badge-regime_aligned { background: #c0392b; }
+    .badge-diaspora        { background: #27ae60; }
+    .badge-reformist       { background: #2980b9; }
+    .badge-international   { background: #7f8c8d; }
+    .badge-independent     { background: #8e44ad; }
+    .badge-state_adjacent  { background: #e67e22; }
+    .badge-unknown         { background: #aaa; }
+
+    /* -----------------------------------------------------------------------
+       Error box
+    ----------------------------------------------------------------------- */
+    #error-box {
+      display: none;
+      background: var(--card);
+      border: 1px solid #8b949e;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    #error-box h2 { font-size: 1rem; color: #f0b429; margin-bottom: 0.5rem; }
+
+    #error-box pre {
+      direction: ltr;
+      text-align: left;
+      background: var(--card-alt);
+      padding: 0.75rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      color: var(--text);
+      overflow-x: auto;
+      white-space: pre-wrap;
+      margin-top: 0.5rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       Card shell (shared by chart, stats, timeline, table sections)
+    ----------------------------------------------------------------------- */
+    .card {
+      background: var(--card);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      padding: 1rem 1.1rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .card h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text);
+      direction: rtl;
+    }
+
+    /* -----------------------------------------------------------------------
+       Stats row
+    ----------------------------------------------------------------------- */
+    .stats-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.9rem;
+    }
+
+    .stat-card {
+      background: var(--card);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      padding: 0.8rem 1rem;
+      flex: 1 1 140px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #9cc4ff;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    /* -----------------------------------------------------------------------
+       Timeline strip
+    ----------------------------------------------------------------------- */
+    .timeline-controls {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-controls label {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .btn-toggle-orient {
+      background: var(--card-alt);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 0.25rem 0.65rem;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-family: inherit;
+      color: var(--text);
+      transition: background 0.15s;
+    }
+
+    .btn-toggle-orient:hover { background: #242b34; }
+
+    /* Timeline container */
+    #timeline-svg-wrap {
+      position: relative;
+      width: 100%;
+      height: 74px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--card);
+      overflow: hidden;
+    }
+
+    #timeline-svg-wrap.vertical {
+      height: 230px;
+    }
+
+    .timeline-axis {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 50%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    #timeline-svg-wrap.vertical .timeline-axis {
+      top: 10px;
+      bottom: 10px;
+      left: 50%;
+      right: auto;
+      width: 1px;
+      height: auto;
+    }
+
+    .timeline-date {
+      position: absolute;
+      bottom: 4px;
+      font-size: 0.7rem;
+      color: var(--muted);
+      font-family: monospace;
+      direction: ltr;
+    }
+
+    .timeline-date-start { left: 10px; }
+    .timeline-date-end { right: 10px; text-align: right; }
+
+    #timeline-svg-wrap.vertical .timeline-date-start {
+      top: 4px;
+      bottom: auto;
+      left: 54%;
+    }
+
+    #timeline-svg-wrap.vertical .timeline-date-end {
+      bottom: 4px;
+      right: auto;
+      left: 54%;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transform: translate(-50%, -50%);
+      background: var(--card-alt);
+    }
+
+    .timeline-dot img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* -----------------------------------------------------------------------
+       Bar chart
+    ----------------------------------------------------------------------- */
+    #chart-container {
+      position: relative;
+      height: 300px;
+    }
+
+    /* -----------------------------------------------------------------------
+       Article table
+    ----------------------------------------------------------------------- */
+    .table-wrap { overflow-x: auto; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    th {
+      background: var(--card);
+      padding: 0.6rem 0.75rem;
+      text-align: right;
+      font-weight: 600;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+      color: var(--text);
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tbody tr:nth-child(odd) td { background: #161b22; }
+    tbody tr:nth-child(even) td { background: #1c2128; }
+    tr:hover td { background: #222a33; }
+
+    /* Title: RTL with ellipsis */
+    .col-title {
+      direction: rtl;
+      max-width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+
+    /* Source: logo + name side by side */
+    .source-cell {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+    }
+
+    .source-logo {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    /* Date: always LTR for ISO format */
+    .col-date {
+      direction: ltr;
+      font-family: monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* Similarity score: colored 0–1 scale */
+    .col-sim {
+      text-align: center;
+      font-size: 0.82rem;
+      font-family: monospace;
+      white-space: nowrap;
+    }
+
+    .sim-bar {
+      display: inline-block;
+      height: 4px;
+      border-radius: 2px;
+      background: #2980b9;
+      margin-right: 4px;
+      vertical-align: middle;
+      opacity: 0.7;
+    }
+
+    /* -----------------------------------------------------------------------
+       Color grammar legend (NER + acquisition)
+    ----------------------------------------------------------------------- */
+    .legend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .legend-swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Language toggle: top-right, persists across reload -->
+  <button id="lang-toggle" aria-label="Toggle language">EN | فا</button>
+
+  <h1 data-i18n="pageHeading">nik³ — توزیع سیاسی محتوا</h1>
+  <p class="subtitle" data-i18n="subtitle">تحلیل منابع خبری فارسی بر اساس گرایش سیاسی</p>
+  <p class="last-updated" id="last-updated" data-i18n="loadingText">در حال بارگذاری...</p>
+
+  <!-- Error state -->
+  <div id="error-box">
+    <h2 id="error-title" data-i18n="errorTitle">داده‌ای یافت نشد</h2>
+    <p data-i18n="errorInstr">برای مشاهده نمودار ابتدا اجرا کنید:</p>
+    <pre>
+source nlp/venv/bin/activate
+python nlp/ingest.py
+python nlp/query_viz.py
+open web/viz/political_distribution.html</pre>
+  </div>
+
+  <!-- Stats row (hidden until data loads) -->
+  <div class="stats-row" id="stats-row" style="display:none">
+    <div class="stat-card">
+      <div class="stat-num" id="stat-total">0</div>
+      <div class="stat-label" data-i18n="statTotal">کل مقالات</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="stat-sources">0</div>
+      <div class="stat-label" data-i18n="statSources">منابع</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="stat-registers">0</div>
+      <div class="stat-label" data-i18n="statRegisters">دسته‌بندی سیاسی</div>
+    </div>
+  </div>
+
+  <!-- -----------------------------------------------------------------------
+       Timeline strip: horizontal (default) or vertical river.
+       Data from articles_by_date in data.json.
+  ----------------------------------------------------------------------- -->
+  <div class="card" id="timeline-section" style="display:none">
+    <h2>
+      <span data-i18n="timelineH2">نوار زمانی مقالات</span>
+      <span style="font-size:0.78rem;color:var(--muted);font-weight:400;margin-right:0.5rem"
+            data-i18n="timelineSubtitle">(بر اساس تاریخ انتشار)</span>
+    </h2>
+
+    <div class="timeline-controls">
+      <label for="orient-toggle" data-i18n="orientLabel">نمایش:</label>
+      <button class="btn-toggle-orient" id="orient-toggle" data-orient="horizontal"
+              aria-label="تغییر جهت نوار زمانی" data-i18n="orientH">
+        افقی — تغییر به عمودی
+      </button>
+    </div>
+
+    <!-- Timeline strip is written by renderTimeline() -->
+    <div id="timeline-svg-wrap"></div>
+  </div>
+
+  <!-- Bar chart: articles by political register -->
+  <div class="card" id="chart-section" style="display:none">
+    <h2 data-i18n="chartH2">تعداد مقالات بر اساس گرایش سیاسی</h2>
+    <div id="chart-container">
+      <canvas id="register-chart"></canvas>
+    </div>
+  </div>
+
+  <!-- Top articles table -->
+  <div class="card" id="table-section" style="display:none">
+    <h2 data-i18n="tableH2">آخرین مقالات (۱۰ مقاله)</h2>
+    <div class="table-wrap">
+      <table id="articles-table">
+        <thead>
+          <tr>
+            <th data-i18n="thTitle">عنوان</th>
+            <th data-i18n="thSource">منبع</th>
+            <th data-i18n="thRegister">گرایش</th>
+            <th data-i18n="thDate">تاریخ</th>
+            <th data-i18n="thSimilarity">شباهت به سایر مقالات</th>
+          </tr>
+        </thead>
+        <tbody id="articles-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Color grammar legend -->
+  <div class="card" id="legend-section" style="display:none">
+    <h2 data-i18n="legendH2">دستور رنگ — گرامر رنگی nik³</h2>
+    <div class="legend-grid" id="legend-grid"></div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // INTERNATIONALISATION STRINGS
+    // =========================================================================
+    const STRINGS = {
+      fa: {
+        pageHeading:      "nik³ — توزیع سیاسی محتوا",
+        subtitle:         "تحلیل منابع خبری فارسی بر اساس گرایش سیاسی",
+        loadingText:      "در حال بارگذاری...",
+        lastUpdatedPrefix:"آخرین بروزرسانی:",
+        errorTitle:       "داده‌ای یافت نشد",
+        errorInstr:       "برای مشاهده نمودار ابتدا اجرا کنید:",
+        errorEmpty:       "پایگاه داده خالی است.",
+        statTotal:        "کل مقالات",
+        statSources:      "منابع",
+        statRegisters:    "دسته‌بندی سیاسی",
+        timelineH2:       "نوار زمانی مقالات",
+        timelineSubtitle: "(بر اساس تاریخ انتشار)",
+        orientLabel:      "نمایش:",
+        orientH:          "افقی — تغییر به عمودی",
+        orientV:          "عمودی — تغییر به افقی",
+        chartH2:          "تعداد مقالات بر اساس گرایش سیاسی",
+        chartDatasetLabel:"تعداد مقالات",
+        chartTooltipUnit: "مقاله",
+        tableH2:          "آخرین مقالات (۱۰ مقاله)",
+        thTitle:          "عنوان",
+        thSource:         "منبع",
+        thRegister:       "گرایش",
+        thDate:           "تاریخ",
+        thSimilarity:     "شباهت به سایر مقالات",
+        legendH2:         "دستور رنگ — گرامر رنگی nik³",
+        noTitle:          "(بدون عنوان)",
+        registers: {
+          regime_aligned: "همسو با حکومت",
+          diaspora:       "مهاجرت",
+          reformist:      "اصلاح‌طلب",
+          international:  "بین‌المللی",
+          independent:    "مستقل",
+          state_adjacent: "شبه‌دولتی",
+          unknown:        "نامشخص",
+        },
+      },
+      en: {
+        pageHeading:      "nik³ — Political Source Distribution",
+        subtitle:         "Persian news source analysis by political alignment",
+        loadingText:      "Loading...",
+        lastUpdatedPrefix:"Last updated:",
+        errorTitle:       "No data found",
+        errorInstr:       "To generate the chart, run:",
+        errorEmpty:       "Database is empty.",
+        statTotal:        "Total Articles",
+        statSources:      "Sources",
+        statRegisters:    "Political Categories",
+        timelineH2:       "Article Timeline",
+        timelineSubtitle: "(by publication date)",
+        orientLabel:      "View:",
+        orientH:          "Horizontal — Switch to Vertical",
+        orientV:          "Vertical — Switch to Horizontal",
+        chartH2:          "Article Count by Political Register",
+        chartDatasetLabel:"Article Count",
+        chartTooltipUnit: "articles",
+        tableH2:          "Latest Articles (10)",
+        thTitle:          "Title",
+        thSource:         "Source",
+        thRegister:       "Register",
+        thDate:           "Date",
+        thSimilarity:     "Similarity Score",
+        legendH2:         "Color Grammar — nik³ Color Scheme",
+        noTitle:          "(untitled)",
+        registers: {
+          regime_aligned: "Regime-Aligned",
+          diaspora:       "Diaspora",
+          reformist:      "Reformist",
+          international:  "International",
+          independent:    "Independent",
+          state_adjacent: "State-Adjacent",
+          unknown:        "Unknown",
+        },
+      },
+    };
+
+    // =========================================================================
+    // REGISTER METADATA
+    // Task 6: exact colors and labels for each political register.
+    // =========================================================================
+    const REGISTER_COLORS = {
+      regime_aligned: "#c0392b",
+      diaspora:        "#27ae60",
+      reformist:       "#2980b9",
+      international:   "#7f8c8d",
+      independent:     "#8e44ad",
+      state_adjacent:  "#e67e22",
+    };
+
+    // =========================================================================
+    // COLOR GRAMMAR — NER and acquisition (DESIGN_SPEC exact values)
+    // =========================================================================
+    const COLOR_GRAMMAR = [
+      // NER geography
+      { label: "ایران (کشور)",     color: "#c0392b" },
+      { label: "شهرهای ایران",     color: "#e74c3c" },
+      { label: "سایر کشورها",      color: "#2980b9" },
+      { label: "شهرهای خارجی",     color: "#5dade2" },
+      // NER people / orgs / events
+      { label: "افراد",             color: "#8e44ad" },
+      { label: "سازمان‌ها",         color: "#e67e22" },
+      { label: "رویداد نظامی",      color: "#f1c40f" },
+      { label: "رویداد دیپلماتیک",  color: "#16a085" },
+      // Acquisition states
+      { label: "کلمه ناشناخته",     color: "#555555" },
+      { label: "در حال یادگیری (۱–۳x)", color: "#777777" },
+      { label: "در حال یادگیری (۴–۹x)", color: "#3498db", note: "اشباع تدریجی" },
+      { label: "آشنا (۱۰x+)",       color: "#1abc9c", note: "رنگ کامل" },
+    ];
+
+    // =========================================================================
+    // SOURCE → DOMAIN mapping for favicon img tags
+    // =========================================================================
+    const SOURCE_DOMAINS = {
+      "IranWire":   "iranwire.com",
+      "BBC Persian":"bbc.co.uk",
+      "VOA Farsi":  "voanews.com",
+      "Radio Farda":"radiofarda.com",
+      "IRNA":       "irna.ir",
+      "Tasnim":     "tasnimnews.com",
+      "Fars News":  "farsnews.ir",
+      "Mehr News":  "mehrnews.com",
+      "Shargh":     "sharghdaily.com",
+      "Etemad":     "etemad.ir",
+    };
+
+    // =========================================================================
+    // GLOBAL STATE
+    // =========================================================================
+    let currentLang   = localStorage.getItem("nik3_lang") || "fa";
+    let loadedData    = null;   // cached from fetch, used when re-rendering on toggle
+    let lastTimestamp = "";     // raw "YYYY-MM-DD HH:MM UTC" string
+    let chartInstance = null;   // Chart.js instance; destroyed before rebuild
+
+    // =========================================================================
+    // HELPERS
+    // =========================================================================
+    function s(key) { return STRINGS[currentLang][key] || STRINGS.fa[key] || key; }
+
+    function faviconUrl(source) {
+      const domain = SOURCE_DOMAINS[source] || source.toLowerCase().replace(/\s+/g, "") + ".com";
+      return `https://www.google.com/s2/favicons?domain=${domain}&sz=16`;
+    }
+
+    function escapeAttr(value) {
+      return `${value || ""}`
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    function registerColor(key) { return REGISTER_COLORS[key] || "#aaa"; }
+
+    function registerLabel(key) {
+      return STRINGS[currentLang].registers[key] || STRINGS.fa.registers[key] || key;
+    }
+
+    function badgeHtml(register) {
+      const key = register || "unknown";
+      return `<span class="badge badge-${key}" data-register="${key}">${registerLabel(key)}</span>`;
+    }
+
+    // =========================================================================
+    // LANGUAGE TOGGLE
+    // =========================================================================
+    function applyLang(lang) {
+      currentLang = lang;
+      localStorage.setItem("nik3_lang", lang);
+
+      const isFA = lang === "fa";
+
+      // Document direction + language attribute
+      document.documentElement.lang = lang;
+      document.documentElement.dir  = isFA ? "rtl" : "ltr";
+
+      // Body font and text alignment
+      document.body.style.fontFamily  = isFA
+        ? "'Vazirmatn', Tahoma, Arial, sans-serif"
+        : "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+      document.body.style.direction  = isFA ? "rtl" : "ltr";
+      document.body.style.textAlign  = isFA ? "right" : "left";
+
+      // Badge direction follows body
+      document.querySelectorAll(".badge").forEach(b => {
+        b.style.direction = isFA ? "rtl" : "ltr";
+      });
+
+      // All data-i18n static elements
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        const val = STRINGS[lang][key];
+        if (val !== undefined) el.textContent = val;
+      });
+
+      // Table alignment by language
+      document.querySelectorAll("th, td").forEach(el => {
+        el.style.textAlign = isFA ? "right" : "left";
+      });
+
+      // last-updated: re-apply prefix around stored timestamp
+      const lu = document.getElementById("last-updated");
+      if (lastTimestamp) {
+        lu.textContent = `${s("lastUpdatedPrefix")} ${lastTimestamp}`;
+      }
+
+      // Orient toggle button: preserve current orientation label
+      const orientBtn = document.getElementById("orient-toggle");
+      if (orientBtn) {
+        const orient = orientBtn.getAttribute("data-orient") || "horizontal";
+        orientBtn.textContent = orient === "horizontal" ? s("orientH") : s("orientV");
+      }
+
+      // Re-render badges with new register labels
+      document.querySelectorAll(".badge[data-register]").forEach(badge => {
+        badge.textContent = registerLabel(badge.getAttribute("data-register"));
+      });
+
+      // Rebuild chart with new axis/tooltip labels
+      if (chartInstance && loadedData && loadedData.by_register) {
+        chartInstance.destroy();
+        chartInstance = null;
+        renderChart(loadedData.by_register);
+      }
+
+      // Re-render timeline tooltips/badges in current language
+      if (timelineData.length > 0) _drawTimeline();
+    }
+
+    document.getElementById("lang-toggle").addEventListener("click", () => {
+      applyLang(currentLang === "fa" ? "en" : "fa");
+    });
+
+    // =========================================================================
+    // TIMELINE STRIP
+    // Horizontal by default; toggled to vertical axis.
+    // Articles rendered as favicon circles at proportional date positions.
+    // =========================================================================
+
+    let timelineData   = [];
+    let timelineOrient = "horizontal";
+
+    function renderTimeline(articles) {
+      if (!articles || articles.length === 0) return;
+      timelineData = articles;
+      _drawTimeline();
+
+      document.getElementById("orient-toggle").addEventListener("click", () => {
+        timelineOrient = (timelineOrient === "horizontal") ? "vertical" : "horizontal";
+        const btn = document.getElementById("orient-toggle");
+        btn.setAttribute("data-orient", timelineOrient);
+        btn.textContent = timelineOrient === "horizontal" ? s("orientH") : s("orientV");
+        _drawTimeline();
+      });
+    }
+
+    function _drawTimeline() {
+      const wrap = document.getElementById("timeline-svg-wrap");
+
+      // Parse date range from articles_by_date
+      const dates = timelineData.map(a => new Date(a.date).getTime()).filter(d => !isNaN(d));
+      if (dates.length === 0) { wrap.innerHTML = ""; return; }
+
+      const minDate = Math.min(...dates);
+      const maxDate = Math.max(...dates);
+      const range   = maxDate - minDate || 1;
+
+      if (timelineOrient === "horizontal") {
+        _drawHorizontal(wrap, minDate, range);
+      } else {
+        _drawVerticalRiver(wrap, minDate, range);
+      }
+    }
+
+    function sourceHash(seed) {
+      let h = 0;
+      const val = `${seed || ""}`;
+      for (let i = 0; i < val.length; i++) h = ((h << 5) - h + val.charCodeAt(i)) | 0;
+      return Math.abs(h);
+    }
+
+    function _drawHorizontal(wrap, minDate, range) {
+      const startLabel = new Date(minDate).toISOString().slice(0, 10);
+      const endLabel   = new Date(minDate + range).toISOString().slice(0, 10);
+
+      let dots = "";
+      for (const art of timelineData) {
+        const t = new Date(art.date).getTime();
+        if (isNaN(t)) continue;
+        const xPct = 2 + ((t - minDate) / range) * 96;
+        const lane = sourceHash(art.source) % 3;
+        const y = 29 + (lane - 1) * 11;
+        const tip = escapeAttr(`${art.source || ""} | ${(art.date || "").slice(0, 10)} | ${registerLabel(art.register || "unknown")}`);
+        dots += `
+          <span class="timeline-dot" title="${tip}" style="left:${xPct.toFixed(2)}%;top:${y}px;border-color:${registerColor(art.register)}">
+            <img src="${faviconUrl(art.source || "")}" alt="${escapeAttr(art.source || "")}" loading="lazy" onerror="this.style.display='none'">
+          </span>`;
+      }
+
+      wrap.classList.remove("vertical");
+      wrap.innerHTML = `
+        <div class="timeline-axis"></div>
+        ${dots}
+        <div class="timeline-date timeline-date-start">${startLabel}</div>
+        <div class="timeline-date timeline-date-end">${endLabel}</div>`;
+    }
+
+    function _drawVerticalRiver(wrap, minDate, range) {
+      const startLabel = new Date(minDate).toISOString().slice(0, 10);
+      const endLabel   = new Date(minDate + range).toISOString().slice(0, 10);
+
+      let dots = "";
+      for (const art of timelineData) {
+        const t = new Date(art.date).getTime();
+        if (isNaN(t)) continue;
+        const yPct = 5 + ((t - minDate) / range) * 90;
+        const lane = sourceHash(art.source) % 5;
+        const x = 50 + (lane - 2) * 6;
+        const tip = escapeAttr(`${art.source || ""} | ${(art.date || "").slice(0, 10)} | ${registerLabel(art.register || "unknown")}`);
+        dots += `
+          <span class="timeline-dot" title="${tip}" style="left:${x}%;top:${yPct.toFixed(2)}%;border-color:${registerColor(art.register)}">
+            <img src="${faviconUrl(art.source || "")}" alt="${escapeAttr(art.source || "")}" loading="lazy" onerror="this.style.display='none'">
+          </span>`;
+      }
+
+      wrap.classList.add("vertical");
+      wrap.innerHTML = `
+        <div class="timeline-axis"></div>
+        ${dots}
+        <div class="timeline-date timeline-date-start">${startLabel}</div>
+        <div class="timeline-date timeline-date-end">${endLabel}</div>`;
+    }
+
+    // =========================================================================
+    // BAR CHART
+    // Bars colored by the exact REGISTER_COLORS from the spec.
+    // =========================================================================
+    function renderChart(byRegister) {
+      const keys   = Object.keys(byRegister);
+      const values = Object.values(byRegister);
+      const colors = keys.map(registerColor);
+
+      const isFA = currentLang === "fa";
+      const tickFont = isFA
+        ? "Vazirmatn, Tahoma, Arial, sans-serif"
+        : "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+      const ctx = document.getElementById("register-chart").getContext("2d");
+      chartInstance = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: keys.map(registerLabel),
+          datasets: [{
+            label: s("chartDatasetLabel"),
+            data: values,
+            backgroundColor: colors,
+            borderColor: colors,
+            borderWidth: 1,
+            borderRadius: 5,
+          }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                title: (items) => registerLabel(keys[items[0].dataIndex]),
+                label: (item)  => `${item.raw} ${s("chartTooltipUnit")}`,
+              },
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: { color: "#c9d1d9", font: { family: tickFont } },
+              grid: { color: "#30363d" },
+              border: { color: "#30363d" },
+            },
+            x: {
+              ticks: { color: "#c9d1d9", font: { family: tickFont, size: 12 } },
+              grid: { display: false },
+              border: { color: "#30363d" },
+            },
+          },
+        },
+      });
+    }
+
+    // =========================================================================
+    // ARTICLES TABLE
+    // Columns: title | source (logo + name) | register badge | date | similarity
+    // word_count column replaced with cosine similarity score per spec.
+    // =========================================================================
+    function renderTable(articles) {
+      const tbody = document.getElementById("articles-tbody");
+      tbody.innerHTML = "";
+
+      for (const art of articles) {
+        const tr = document.createElement("tr");
+
+        // --- Title (RTL Farsi, ellipsis) ---
+        const titleTd = document.createElement("td");
+        titleTd.className = "col-title";
+        titleTd.textContent = art.title || s("noTitle");
+        titleTd.title = art.title || "";
+        tr.appendChild(titleTd);
+
+        // --- Source: favicon img + name ---
+        const srcTd  = document.createElement("td");
+        const srcDiv = document.createElement("div");
+        srcDiv.className = "source-cell";
+        // Favicon img
+        const img = document.createElement("img");
+        img.className = "source-logo";
+        img.src = faviconUrl(art.source);
+        img.alt = art.source;
+        img.loading = "lazy";
+        img.onerror = () => { img.style.display = "none"; };  // hide on 404
+        srcDiv.appendChild(img);
+        const srcName = document.createElement("span");
+        srcName.textContent = art.source;
+        srcDiv.appendChild(srcName);
+        srcTd.appendChild(srcDiv);
+        tr.appendChild(srcTd);
+
+        // --- Register badge (Task 6 colors) ---
+        const regTd = document.createElement("td");
+        regTd.innerHTML = badgeHtml(art.register);
+        tr.appendChild(regTd);
+
+        // --- Date (LTR ISO) ---
+        const dateTd = document.createElement("td");
+        dateTd.className = "col-date";
+        dateTd.textContent = (art.date || "").slice(0, 10);
+        tr.appendChild(dateTd);
+
+        // --- Similarity score (bar + number) ---
+        const simTd  = document.createElement("td");
+        simTd.className = "col-sim";
+        const score = typeof art.similarity_score === "number" ? art.similarity_score : 0;
+        const barW  = Math.round(score * 60);  // max 60px visual bar
+        simTd.innerHTML =
+          `<span class="sim-bar" style="width:${barW}px"></span>` +
+          `<span>${score.toFixed(3)}</span>`;
+        tr.appendChild(simTd);
+
+        tbody.appendChild(tr);
+      }
+    }
+
+    // =========================================================================
+    // COLOR GRAMMAR LEGEND
+    // =========================================================================
+    function renderLegend() {
+      const grid = document.getElementById("legend-grid");
+      grid.innerHTML = "";
+      for (const item of COLOR_GRAMMAR) {
+        const div = document.createElement("div");
+        div.className = "legend-item";
+        div.innerHTML =
+          `<span class="legend-swatch" style="background:${item.color}"></span>` +
+          `<span>${item.label}${item.note ? ` <span style="color:#999;font-size:0.75em">(${item.note})</span>` : ""}</span>`;
+        grid.appendChild(div);
+      }
+    }
+
+    // =========================================================================
+    // MAIN LOADER
+    // =========================================================================
+    async function loadAndRender() {
+      let data;
+      try {
+        const resp = await fetch("./data.json");
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        data = await resp.json();
+      } catch (err) {
+        document.getElementById("error-box").style.display = "block";
+        document.getElementById("last-updated").textContent =
+          `${s("lastUpdatedPrefix")} — ${err.message}`;
+        return;
+      }
+
+      if (!data || !data.total_articles) {
+        document.getElementById("error-box").style.display = "block";
+        document.getElementById("last-updated").textContent = s("errorEmpty");
+        return;
+      }
+
+      loadedData = data;
+
+      // Timestamp — store raw value so applyLang can re-prefix it
+      lastTimestamp = (data.generated_at || "").slice(0, 16).replace("T", " ") + " UTC";
+      document.getElementById("last-updated").textContent =
+        `${s("lastUpdatedPrefix")} ${lastTimestamp}`;
+
+      // Stats
+      document.getElementById("stat-total").textContent     = data.total_articles;
+      document.getElementById("stat-sources").textContent   = Object.keys(data.by_source   || {}).length;
+      document.getElementById("stat-registers").textContent = Object.keys(data.by_register || {}).length;
+      document.getElementById("stats-row").style.display = "flex";
+
+      // Timeline strip
+      if (data.articles_by_date && data.articles_by_date.length > 0) {
+        document.getElementById("timeline-section").style.display = "block";
+        renderTimeline(data.articles_by_date);
+      }
+
+      // Bar chart
+      if (data.by_register && Object.keys(data.by_register).length > 0) {
+        document.getElementById("chart-section").style.display = "block";
+        renderChart(data.by_register);
+      }
+
+      // Articles table
+      if (data.top_articles && data.top_articles.length > 0) {
+        document.getElementById("table-section").style.display = "block";
+        renderTable(data.top_articles);
+      }
+
+      // Color grammar legend
+      document.getElementById("legend-section").style.display = "block";
+      renderLegend();
+    }
+
+    // Apply persisted language preference before first render, then load data
+    applyLang(currentLang);
+    loadAndRender();
+  </script>
+</body>
+</html>

@@ -1,0 +1,2621 @@
+{
+  "generated_at": "2026-03-07T10:16:36Z",
+  "total_articles": 16715,
+  "by_register": {
+    "regime_aligned": 13108,
+    "diaspora": 2031,
+    "international": 1576
+  },
+  "by_source": {
+    "Mehr News": 6697,
+    "IRNA": 3999,
+    "Tasnim": 2412,
+    "BBC Persian": 1576,
+    "Radio Farda": 1116,
+    "IranWire": 915
+  },
+  "top_articles": [
+    {
+      "id": 16678,
+      "title": "📹",
+      "source": "Mehr News",
+      "register": "regime_aligned",
+      "date": "2026-03-07T10:02:02Z",
+      "word_count": 14,
+      "url": "https://t.me/mehrnews/356670",
+      "similarity_score": 0.2887
+    },
+    {
+      "id": 16677,
+      "title": "صدای انفجارهای شدید در تهران",
+      "source": "Mehr News",
+      "register": "regime_aligned",
+      "date": "2026-03-07T10:01:53Z",
+      "word_count": 6,
+      "url": "https://t.me/mehrnews/356669",
+      "similarity_score": 0.8111
+    },
+    {
+      "id": 16705,
+      "title": "🔸",
+      "source": "Radio Farda",
+      "register": "diaspora",
+      "date": "2026-03-07T10:01:35Z",
+      "word_count": 178,
+      "url": "https://t.me/RadioFarda/154360",
+      "similarity_score": 0.4576
+    },
+    {
+      "id": 16676,
+      "title": "اطلاعیه شماره ۱۶ ارتش جمهوری اسلامی ایران؛۱۳ فروند پهپاد مهاجم توسط شبکه یکپارچه قرارگاه مشترک پدافند هوایی منهدم شد",
+      "source": "Mehr News",
+      "register": "regime_aligned",
+      "date": "2026-03-07T09:58:40Z",
+      "word_count": 136,
+      "url": "https://t.me/mehrnews/356668",
+      "similarity_score": 0.895
+    },
+    {
+      "id": 14253,
+      "title": "🔸",
+      "source": "IRNA",
+      "register": "regime_aligned",
+      "date": "2026-03-07T09:57:59Z",
+      "word_count": 67,
+      "url": "https://t.me/irna_1313/393300",
+      "similarity_score": 0.7952
+    },
+    {
+      "id": 16689,
+      "title": "🔻",
+      "source": "BBC Persian",
+      "register": "international",
+      "date": "2026-03-07T09:56:46Z",
+      "word_count": 114,
+      "url": "https://t.me/bbcpersian/273568",
+      "similarity_score": 0.6082
+    },
+    {
+      "id": 16675,
+      "title": "سپاه پاسداران: تهاجم انبوه یگان پهپادی نیروی دریایی سپاه به پایگاه هوایی الظفره",
+      "source": "Mehr News",
+      "register": "regime_aligned",
+      "date": "2026-03-07T09:56:37Z",
+      "word_count": 91,
+      "url": "https://t.me/mehrnews/356667",
+      "similarity_score": 0.9797
+    },
+    {
+      "id": 14276,
+      "title": "۱۳ پهپاد مهاجم منهدم شد",
+      "source": "Tasnim",
+      "register": "regime_aligned",
+      "date": "2026-03-07T09:56:26Z",
+      "word_count": 123,
+      "url": "https://t.me/tasnimnews/393703",
+      "similarity_score": 0.895
+    },
+    {
+      "id": 16674,
+      "title": "صدور فوری اسناد مفقود و آسیب‌دیده از جنگ",
+      "source": "Mehr News",
+      "register": "regime_aligned",
+      "date": "2026-03-07T09:54:25Z",
+      "word_count": 102,
+      "url": "https://t.me/mehrnews/356666",
+      "similarity_score": 0.3397
+    },
+    {
+      "id": 14275,
+      "title": "کلاس‌های دانشگاه‌ها و موسسات آموزش عالی تا پایان سال مجازی شد",
+      "source": "Tasnim",
+      "register": "regime_aligned",
+      "date": "2026-03-07T09:54:18Z",
+      "word_count": 99,
+      "url": "https://t.me/tasnimnews/393702",
+      "similarity_score": 0.5086
+    }
+  ],
+  "articles_by_date": [
+    {
+      "date": "2026-01-15T12:26:10Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-01-22T11:13:17Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T05:04:07Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T05:15:10Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T05:36:59Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T05:45:22Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T06:00:37Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T06:14:23Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T06:48:32Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T06:57:27Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T07:19:22Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T07:57:51Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T09:30:40Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T09:32:06Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T09:38:28Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T09:39:22Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T09:42:45Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T09:46:59Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T10:01:37Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:02:09Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:03:03Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:09:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:16:16Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T10:18:41Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:20:19Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:21:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:24:11Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T10:27:24Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:31:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:31:52Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T10:33:55Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:35:57Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:38:05Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:39:10Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:42:51Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T10:44:16Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T10:50:58Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T10:52:30Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:00:26Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T11:01:59Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T11:02:56Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:04:13Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:06:15Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T11:08:12Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:13:34Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:21:13Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:29:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:34:36Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T11:38:44Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:41:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:47:23Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:50:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:56:01Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T11:59:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:02:32Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T12:06:43Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:07:21Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:09:31Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T12:10:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:14:27Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T12:18:26Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:20:49Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T12:21:38Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:27:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:27:34Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:33:10Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:35:19Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:36:49Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:41:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:41:32Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T12:45:28Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:46:36Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T12:48:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:53:09Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T12:55:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T12:56:38Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T13:09:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:14:36Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T13:15:19Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:16:18Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:23:51Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:23:55Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:23:59Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:24:02Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:24:07Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:24:44Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:25:12Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:28:09Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:30:23Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:35:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:39:16Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T13:39:30Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T13:43:24Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:44:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:46:29Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:49:58Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:55:15Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T13:59:46Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:04:14Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:06:10Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T14:07:04Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:12:19Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:13:15Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:13:42Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:19:43Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T14:24:06Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:25:22Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T14:25:26Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T14:26:03Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:26:41Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:26:41Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:28:54Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:29:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:30:56Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:42:17Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:43:41Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T14:45:31Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T14:52:24Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:52:26Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:54:49Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:56:46Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T14:57:26Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T15:00:25Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:01:36Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:02:58Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:04:02Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:08:38Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:09:25Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T15:10:02Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:17:20Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:19:50Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T15:21:06Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:21:49Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:30:42Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T15:37:57Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T15:39:39Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T15:40:42Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T15:41:17Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:44:37Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:45:15Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T15:46:03Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:46:13Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:47:08Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T15:47:56Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:49:05Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:50:26Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:51:25Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:52:34Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T15:53:11Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:54:20Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:55:49Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:56:19Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:57:07Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T15:58:30Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:00:36Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:02:19Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T16:02:57Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:07:47Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:09:18Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:10:29Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:12:56Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:15:02Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:16:46Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T16:19:51Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T16:25:36Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:26:00Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T16:30:30Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:31:46Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T16:34:12Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:40:16Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:40:27Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:40:59Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T16:41:31Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:46:11Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:46:58Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:48:25Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:49:38Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T16:53:32Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:54:00Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T16:56:07Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T16:56:28Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:02:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:05:44Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:06:54Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:13:27Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:15:09Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T17:16:19Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T17:17:18Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:18:48Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T17:24:52Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:25:00Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:30:09Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:31:45Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:37:05Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T17:37:21Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:38:28Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:39:54Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:43:42Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:46:39Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:46:50Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T17:51:20Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T17:53:19Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T17:59:53Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:01:47Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:02:45Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T18:03:19Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:04:30Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T18:05:31Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:10:47Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:11:53Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:14:43Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:24:02Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:28:31Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:28:56Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:31:39Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:42:08Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:51:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:55:02Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T18:56:16Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T18:58:57Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:02:50Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:11:05Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:13:03Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:14:02Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:23:04Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:28:33Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:31:36Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:38:16Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:40:25Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:41:18Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:43:37Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:45:07Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T19:47:37Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:47:39Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:49:24Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T19:51:12Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:51:41Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T19:54:51Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:56:37Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T19:56:47Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T20:00:44Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T20:07:31Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T20:11:26Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T20:12:03Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T20:16:11Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T20:16:24Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T20:16:51Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T20:22:40Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T20:29:46Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T20:31:12Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T20:32:49Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T20:33:43Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T20:41:45Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T20:53:18Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T21:01:40Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T21:02:53Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T21:05:26Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T21:10:08Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T21:10:59Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T21:17:23Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T21:22:56Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T21:50:25Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T22:10:10Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T22:11:19Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T22:16:45Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-05T22:37:38Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T23:08:00Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T23:35:49Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-05T23:36:08Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-05T23:54:08Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T00:40:04Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T01:07:05Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T01:40:08Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T02:05:05Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T02:24:00Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T02:53:27Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T03:19:45Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T03:40:03Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T03:56:57Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T04:17:20Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T04:28:41Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T04:31:25Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T04:40:04Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T04:48:36Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T04:48:50Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:05:45Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:07:30Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T05:08:00Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:09:43Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:17:54Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T05:24:55Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:25:32Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T05:25:49Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:30:45Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:30:57Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T05:31:31Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:35:46Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:39:41Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:40:07Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T05:41:22Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:53:47Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T05:56:38Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T06:01:30Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T06:01:53Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:03:44Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T06:09:01Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:10:42Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T06:11:28Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:12:14Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:13:36Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:14:01Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:17:00Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:24:57Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:27:44Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:28:14Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T06:35:37Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:38:04Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:40:20Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T06:42:15Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:46:48Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T06:55:40Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T06:58:02Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:00:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:00:57Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:04:53Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:10:27Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:11:49Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:12:01Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T07:15:43Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T07:16:37Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:20:06Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:22:27Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:24:09Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:24:45Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:29:02Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T07:31:10Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:31:43Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T07:32:15Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:34:56Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:38:51Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T07:39:45Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:45:07Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T07:49:39Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:51:02Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T07:53:53Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T07:55:39Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:03:53Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:08:07Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:08:36Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:08:39Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:11:13Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T08:14:46Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:17:11Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:20:17Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:21:45Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:26:27Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:29:41Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:34:37Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T08:36:13Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:43:08Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:48:02Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:48:42Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:51:42Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T08:51:43Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:53:37Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T08:58:18Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T08:59:12Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:06:11Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T09:06:31Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:06:35Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:07:04Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T09:08:43Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:14:59Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:17:49Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:19:22Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:21:16Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:25:20Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:28:46Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T09:30:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:31:26Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T09:32:33Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T09:37:20Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:37:57Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:40:25Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:41:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:47:09Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T09:48:12Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:50:42Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:51:33Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T09:53:08Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T09:56:38Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:01:29Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:01:38Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:02:27Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:09:24Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:09:58Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:10:04Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:11:03Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T10:11:12Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T10:11:49Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:14:42Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:15:41Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:18:07Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T10:18:10Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:19:20Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T10:19:55Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T10:21:44Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T10:21:55Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T10:24:32Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T10:29:29Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:32:21Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T10:34:47Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:36:59Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T10:37:49Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:40:01Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:48:14Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T10:52:29Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T10:56:58Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T11:01:09Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:02:28Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:04:40Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:10:40Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:11:33Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T11:12:25Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T11:13:56Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:29:12Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:29:18Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:29:57Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T11:31:51Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T11:34:45Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T11:35:13Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:35:46Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:38:41Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:39:21Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:41:58Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T11:46:25Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T11:52:15Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:01:52Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:02:39Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T12:04:02Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:07:35Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T12:12:12Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:13:44Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:16:53Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:19:16Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T12:22:28Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:25:59Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T12:29:18Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:30:30Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:30:34Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:32:20Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:36:05Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T12:38:25Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:41:25Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:42:21Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T12:43:33Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:47:37Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:48:50Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:48:53Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T12:53:41Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T12:56:28Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:00:02Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:00:32Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:02:04Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:04:24Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:05:37Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T13:07:54Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:12:00Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:14:15Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:18:32Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T13:18:58Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:19:46Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:25:51Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T13:28:20Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:35:44Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:40:27Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:44:23Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T13:50:05Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:50:33Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:51:50Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:52:16Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T13:56:55Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:58:23Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:58:25Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T13:59:46Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T14:00:04Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T14:02:21Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T14:03:24Z",
+      "source": "IranWire",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T14:06:28Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T14:07:58Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T14:10:11Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T14:18:23Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T14:19:24Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T14:20:28Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T14:23:34Z",
+      "source": "Radio Farda",
+      "register": "diaspora"
+    },
+    {
+      "date": "2026-02-06T14:26:01Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T14:26:02Z",
+      "source": "IRNA",
+      "register": "regime_aligned"
+    },
+    {
+      "date": "2026-02-06T14:32:30Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T14:32:45Z",
+      "source": "BBC Persian",
+      "register": "international"
+    },
+    {
+      "date": "2026-02-06T14:33:39Z",
+      "source": "Mehr News",
+      "register": "regime_aligned"
+    }
+  ]
+}

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nik³ — Persian language acquisition</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/iransansx@v23.0.0/dist/font-face.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        /* ── nik³ tetrahedron hero (scoped) ───────────────────────── */
+        .nik3-hero {
+            --bg: #080b10;
+            --gold: #c9a84c;
+            --gold-dim: #8a6f32;
+            --text: #e8dcc8;
+            --text-muted: #4a4030;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+            font-family: 'IRANSansX', sans-serif;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .nik3-hero *,
+        .nik3-hero *::before,
+        .nik3-hero *::after {
+            box-sizing: border-box;
+        }
+        .nik3-hero #nik3-particles {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .nik3-hero .scene {
+            position: relative;
+            width: 520px;
+            height: 520px;
+            z-index: 1;
+        }
+        .nik3-hero canvas#nik3-tet {
+            display: block;
+            width: 520px;
+            height: 520px;
+        }
+        .nik3-hero .logotype {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+        .nik3-hero .logotype.visible {
+            opacity: 1;
+        }
+        .nik3-hero .logo-main {
+            font-size: 80px;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.03em;
+            line-height: 1;
+            direction: ltr;
+        }
+        .nik3-hero .logo-main sup {
+            font-size: 34px;
+            font-weight: 300;
+            color: var(--gold);
+            vertical-align: super;
+        }
+        .nik3-hero .logo-sub {
+            font-size: 10px;
+            color: var(--text-muted);
+            letter-spacing: 0.3em;
+            direction: ltr;
+            margin-top: 12px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        .nik3-hero .pillars {
+            position: absolute;
+            bottom: 52px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 28px;
+            opacity: 0;
+            transition: opacity 1.6s ease 0.6s;
+            white-space: nowrap;
+        }
+        .nik3-hero .pillars.visible {
+            opacity: 1;
+        }
+        .nik3-hero .pillar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .nik3-hero .pillar-fa {
+            font-size: 13px;
+            color: var(--gold);
+            font-weight: 600;
+            direction: rtl;
+        }
+        .nik3-hero .pillar-en {
+            font-size: 9px;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+            direction: ltr;
+        }
+        .nik3-hero .pillar-sep {
+            width: 1px;
+            height: 16px;
+            background: var(--text-muted);
+            opacity: 0.3;
+            margin: 0 4px;
+            align-self: center;
+        }
+        .nik3-hero .controls {
+            position: absolute;
+            bottom: 14px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 4px;
+        }
+        .nik3-hero .btn {
+            font-size: 11px;
+            color: var(--text-muted);
+            cursor: pointer;
+            letter-spacing: 0.12em;
+            direction: ltr;
+            border: 1px solid #1a1e28;
+            padding: 5px 14px;
+            border-radius: 4px;
+            font-family: 'IRANSansX', sans-serif;
+            transition: color 0.2s, border-color 0.2s;
+            background: transparent;
+        }
+        .nik3-hero .btn:hover {
+            color: var(--gold);
+            border-color: var(--gold-dim);
+        }
+        .nik3-hero .btn-enter {
+            opacity: 0;
+            transition: opacity 1.2s ease 1.2s;
+        }
+        .nik3-hero .btn-enter.visible {
+            opacity: 1;
+        }
+
+        .nik3-hero-descriptor {
+            font-family: 'IRANSansX', sans-serif;
+            font-size: 12px;
+            color: #64748B;
+            text-align: center;
+            letter-spacing: 0.2em;
+            margin: 0;
+            padding: 14px 16px;
+            background: #fff;
+        }
+
+        .portfolio-content {
+            font-family: "Minion Pro", "Adobe Minion Pro", Georgia, serif;
+            max-width: 600px;
+            margin: 100px auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+
+        .nav a {
+            color: #CE4F1A;
+            text-decoration: none;
+            font-size: 0.95em;
+            letter-spacing: 0.4px;
+        }
+
+        .nav a:hover { color: #8B3010; }
+
+        .logo-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 0 auto 30px;
+        }
+
+        .logo-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-iron {
+            animation: fadeInOut 3.2s ease-in-out infinite;
+        }
+
+        .logo-rust {
+            animation: fadeOutIn 3.2s ease-in-out infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes fadeOutIn {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        h1 { font-size: 3em; margin: 0; }
+        .tagline { font-size: 1.5em; color: #CE4F1A; margin: 20px 0; }
+        .subtitle { color: #64748B; }
+        .farsi-line {
+            direction: rtl;
+            color: #64748B;
+            font-size: 1.1em;
+            margin: 10px 0 16px;
+        }
+        .badge {
+            display: inline-block;
+            margin: 12px 0 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid #CBD5F5;
+            color: #64748B;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <section class="nik3-hero" aria-label="nik³">
+        <canvas id="nik3-particles" width="800" height="800"></canvas>
+
+        <div class="scene">
+            <canvas id="nik3-tet" width="520" height="520"></canvas>
+
+            <div class="logotype" id="nik3-logotype">
+                <div class="logo-main">nik<sup>³</sup></div>
+                <div class="logo-sub">persian acquisition engine</div>
+            </div>
+
+            <div class="pillars" id="nik3-pillars">
+                <div class="pillar">
+                    <div class="pillar-fa">پندار نیک</div>
+                    <div class="pillar-en">good thoughts</div>
+                </div>
+                <div class="pillar-sep"></div>
+                <div class="pillar">
+                    <div class="pillar-fa">گفتار نیک</div>
+                    <div class="pillar-en">good words</div>
+                </div>
+                <div class="pillar-sep"></div>
+                <div class="pillar">
+                    <div class="pillar-fa">رفتار نیک</div>
+                    <div class="pillar-en">good deeds</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button type="button" class="btn" id="nik3-replay-btn">↺ replay</button>
+                <button type="button" class="btn btn-enter" id="nik3-enter-btn">enter ›</button>
+            </div>
+        </div>
+    </section>
+
+    <p class="nik3-hero-descriptor">nik³ — persian language acquisition engine</p>
+
+    <div class="portfolio-content">
+    <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="logo-container">
+        <img src="RUST_crab.png" alt="Rust Crab" class="logo-rust">
+        <img src="Iron_crab.png" alt="Iron Crab" class="logo-iron">
+    </div>
+    <h1>nik<sup>3</sup></h1>
+    <p class="tagline">Persian language acquisition for serious learners</p>
+    <div class="farsi-line">پندار نیک · گفتار نیک · رفتار نیک</div>
+    <p class="subtitle">Read real Farsi. Tap what you don't know. Hear it in context. Your vocabulary grows with you.</p>
+    <div class="badge">Under active development</div>
+    <p id="contact">
+        <a href="mailto:xanthosdev@pm.me?subject=nik%C2%B3%20%E2%80%94%20I%20want%20to%20know%20more">Contact</a>
+    </p>
+    </div>
+
+    <script>
+    (function () {
+        const hero = document.querySelector('.nik3-hero');
+        const pCvs = document.getElementById('nik3-particles');
+        const pCtx = pCvs.getContext('2d');
+
+        function syncParticlesSize() {
+            if (!hero) return;
+            const w = hero.clientWidth;
+            const h = hero.clientHeight;
+            if (w < 1 || h < 1) return;
+            pCvs.width = w;
+            pCvs.height = h;
+        }
+
+        syncParticlesSize();
+
+        const stars = Array.from({ length: 200 }, () => ({
+            x: Math.random() * pCvs.width,
+            y: Math.random() * pCvs.height,
+            r: Math.random() * 1.1 + 0.15,
+            a: Math.random(),
+            da: (Math.random() - 0.5) * 0.007
+        }));
+
+        window.addEventListener('resize', () => {
+            syncParticlesSize();
+            stars.forEach(s => {
+                s.x = Math.min(s.x, pCvs.width);
+                s.y = Math.min(s.y, pCvs.height);
+            });
+        });
+
+        (function animStars() {
+            pCtx.clearRect(0, 0, pCvs.width, pCvs.height);
+            stars.forEach(s => {
+                s.a = Math.max(0.04, Math.min(0.9, s.a + s.da));
+                if (s.a <= 0.04 || s.a >= 0.9) s.da *= -1;
+                pCtx.beginPath();
+                pCtx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                pCtx.fillStyle = `rgba(201,168,76,${s.a * 0.35})`;
+                pCtx.fill();
+            });
+            requestAnimationFrame(animStars);
+        })();
+
+        const cv = document.getElementById('nik3-tet');
+        const cx = cv.getContext('2d');
+        const W = 520, H = 520, OX = W / 2, OY = H / 2;
+
+        const R = 148;
+        const V = [
+            [0,           -R,          0         ],
+            [-R * 0.9428, R * 0.3333,  0         ],
+            [ R * 0.4714, R * 0.3333,  R * 0.8165 ],
+            [ R * 0.4714, R * 0.3333, -R * 0.8165 ]
+        ];
+
+        const FACES = [
+            { verts: [0, 1, 2], label: { fa: 'پندار نیک', en: 'GOOD THOUGHTS' }, hue: 'rgba(201,168,76,' },
+            { verts: [0, 2, 3], label: { fa: 'گفتار نیک', en: 'GOOD WORDS' },    hue: 'rgba(185,148,60,' },
+            { verts: [0, 3, 1], label: { fa: 'رفتار نیک', en: 'GOOD DEEDS' },    hue: 'rgba(220,188,98,' }
+        ];
+
+        let rotY = 0, rotX = -0.28, spinSpd = 0.013;
+        let phase = 'spin';
+        let t0 = Date.now(), raf;
+
+        function rot([x, y, z], rx, ry) {
+            const x1 = x * Math.cos(ry) + z * Math.sin(ry);
+            const z1 = -x * Math.sin(ry) + z * Math.cos(ry);
+            const y2 = y * Math.cos(rx) - z1 * Math.sin(rx);
+            const z2 = y * Math.sin(rx) + z1 * Math.cos(rx);
+            return [x1, y2, z2];
+        }
+        function proj([x, y, z]) {
+            const f = 580, s = f / (f + z + 220);
+            return [OX + x * s, OY + y * s, s];
+        }
+        function cross(a, b) {
+            return [
+                a[1] * b[2] - a[2] * b[1],
+                a[2] * b[0] - a[0] * b[2],
+                a[0] * b[1] - a[1] * b[0]
+            ];
+        }
+        function norm(v) {
+            const l = Math.hypot(...v);
+            return v.map(x => x / l);
+        }
+        function dot(a, b) {
+            return a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+        }
+        function sub(a, b) {
+            return [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
+        }
+
+        const LIGHT = norm([0.6, -1, 0.7]);
+
+        let lbls = [];
+        document.fonts.ready.then(() => {
+            lbls = FACES.map(f => {
+                const oc = document.createElement('canvas');
+                oc.width = oc.height = 190;
+                const c = oc.getContext('2d');
+                c.textAlign = 'center';
+                c.textBaseline = 'middle';
+                c.direction = 'rtl';
+                c.font = 'bold 30px "IRANSansX",sans-serif';
+                c.fillStyle = 'rgba(201,168,76,0.92)';
+                c.fillText(f.label.fa, 95, 88);
+                c.direction = 'ltr';
+                c.font = '300 10px "IRANSansX",sans-serif';
+                c.fillStyle = 'rgba(180,148,72,0.55)';
+                c.fillText(f.label.en, 95, 114);
+                return oc;
+            });
+        });
+
+        function frame() {
+            const el = (Date.now() - t0) / 1000;
+            if (phase === 'spin' && el > 3.6) phase = 'slow';
+            if (phase === 'slow' && el > 5.8) phase = 'settle';
+            if (phase === 'settle' && el > 8) {
+                phase = 'done';
+                document.getElementById('nik3-logotype').classList.add('visible');
+                document.getElementById('nik3-pillars').classList.add('visible');
+                document.getElementById('nik3-enter-btn').classList.add('visible');
+                cv.style.cssText = 'transition:opacity 1.8s ease;opacity:0.12;';
+            }
+
+            if (phase === 'spin') rotY += spinSpd;
+            else if (phase === 'slow') { spinSpd *= 0.965; rotY += spinSpd; }
+            else if (phase === 'settle') {
+                const tgt = Math.round(rotY / (Math.PI * 2)) * Math.PI * 2 + 0.45;
+                rotY += (tgt - rotY) * 0.055;
+                rotX += (-0.22 - rotX) * 0.04;
+            }
+
+            cx.clearRect(0, 0, W, H);
+
+            const tv = V.map(v => rot(v, rotX, rotY));
+            const pv = tv.map(proj);
+
+            const sorted = [...FACES].map((f, i) => {
+                const z = f.verts.reduce((s, vi) => s + tv[vi][2], 0) / 3;
+                return { f, i, z };
+            }).sort((a, b) => a.z - b.z);
+
+            sorted.forEach(({ f, i }) => {
+                const [vi0, vi1, vi2] = f.verts;
+                const [t0v, t1v, t2v] = [tv[vi0], tv[vi1], tv[vi2]];
+                const [p0, p1, p2] = [pv[vi0], pv[vi1], pv[vi2]];
+
+                const nrm = cross(sub(t1v, t0v), sub(t2v, t0v));
+                if (dot(nrm, [0, 0, 1]) < 0) return;
+
+                const n = norm(nrm);
+                const diff = Math.max(0.1, dot(n, LIGHT));
+                const br = 0.2 + diff * 0.8;
+
+                const gcx = (p0[0] + p1[0] + p2[0]) / 3;
+                const gcy = (p0[1] + p1[1] + p2[1]) / 3;
+                const g = cx.createRadialGradient(gcx, gcy, 8, gcx, gcy, 140);
+                g.addColorStop(0, f.hue + (br * 0.2) + ')');
+                g.addColorStop(1, f.hue + (br * 0.05) + ')');
+
+                cx.beginPath();
+                cx.moveTo(p0[0], p0[1]);
+                cx.lineTo(p1[0], p1[1]);
+                cx.lineTo(p2[0], p2[1]);
+                cx.closePath();
+                cx.fillStyle = g;
+                cx.fill();
+
+                cx.strokeStyle = `rgba(201,168,76,${0.28 * br})`;
+                cx.lineWidth = 1.1;
+                cx.stroke();
+
+                if (lbls[i] && phase !== 'done') {
+                    const fa = Math.min(1, Math.max(0, dot(n, [0, 0, 1]) * 2.8));
+                    if (fa > 0.12) {
+                        cx.save();
+                        cx.globalAlpha = fa * 0.88;
+                        cx.translate(gcx, gcy);
+                        cx.drawImage(lbls[i], -95, -95, 190, 190);
+                        cx.restore();
+                    }
+                }
+            });
+
+            const [ax, ay] = pv[0];
+            const ag = cx.createRadialGradient(ax, ay, 0, ax, ay, 10);
+            ag.addColorStop(0, 'rgba(201,168,76,0.7)');
+            ag.addColorStop(1, 'rgba(201,168,76,0)');
+            cx.beginPath();
+            cx.arc(ax, ay, 10, 0, Math.PI * 2);
+            cx.fillStyle = ag;
+            cx.fill();
+
+            const gg = cx.createRadialGradient(OX, OY + 70, 10, OX, OY + 70, 150);
+            gg.addColorStop(0, 'rgba(201,168,76,0.05)');
+            gg.addColorStop(1, 'rgba(0,0,0,0)');
+            cx.beginPath();
+            cx.arc(OX, OY + 70, 150, 0, Math.PI * 2);
+            cx.fillStyle = gg;
+            cx.fill();
+
+            if (phase !== 'done') raf = requestAnimationFrame(frame);
+        }
+
+        function startAnimation() {
+            cancelAnimationFrame(raf);
+            rotY = 0;
+            rotX = -0.28;
+            spinSpd = 0.013;
+            phase = 'spin';
+            t0 = Date.now();
+            cv.style.cssText = '';
+            cv.style.opacity = '1';
+            document.getElementById('nik3-logotype').classList.remove('visible');
+            document.getElementById('nik3-pillars').classList.remove('visible');
+            document.getElementById('nik3-enter-btn').classList.remove('visible');
+            raf = requestAnimationFrame(frame);
+        }
+
+        function enterApp() {
+            window.location.href = 'viz/political_distribution.html';
+        }
+
+        document.getElementById('nik3-replay-btn').addEventListener('click', startAnimation);
+        document.getElementById('nik3-enter-btn').addEventListener('click', enterApp);
+
+        startAnimation();
+    })();
+    </script>
+
+    <!-- Portfolio demo nav -->
+    <div style="
+        position:fixed; bottom:0; left:0; right:0;
+        background:rgba(8,11,16,0.92); backdrop-filter:blur(8px);
+        border-top:1px solid rgba(201,168,76,0.2);
+        display:flex; align-items:center; gap:16px; padding:10px 24px;
+        font-family:'IRANSansX',sans-serif; font-size:0.82em;
+        z-index:100;
+    ">
+        <a href=".." style="color:#c9a84c; text-decoration:none; opacity:0.7;">← Demos</a>
+        <span style="color:rgba(201,168,76,0.3);">|</span>
+        <a href="viz/political_distribution.html" style="color:#c9a84c; text-decoration:none;">
+            Source Register Analysis
+        </a>
+        <a href="viz/map.html" style="color:#c9a84c; text-decoration:none;">
+            News Map
+        </a>
+        <span style="flex:1;"></span>
+        <span style="color:rgba(201,168,76,0.45); font-size:0.9em;">nik³ · Persian acquisition engine</span>
+    </div>
+</body>
+</html>

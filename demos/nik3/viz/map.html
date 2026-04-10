@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nik³ — نقشه</title>
+
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/iransansx@v23.0.0/dist/font-face.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --iran-country:   #c0392b;
+    --iran-city:      #e74c3c;
+    --foreign-country:#2980b9;
+    --foreign-city:   #5dade2;
+    --person:         #8e44ad;
+    --org:            #e67e22;
+    --military:       #f1c40f;
+    --diplomatic:     #16a085;
+
+    --bg:         #0d1117;
+    --surface:    #161b22;
+    --border:     #21262d;
+    --text:       #e6edf3;
+    --text-muted: #7d8590;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IRANSansX', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topbar {
+    height: 48px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-shrink: 0;
+    direction: ltr;
+    z-index: 1000;
+  }
+
+  .topbar .logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+
+  .topbar .logo sup {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+
+  .topbar nav {
+    display: flex;
+    gap: 4px;
+  }
+
+  .topbar nav a {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: 'IRANSansX', sans-serif;
+  }
+
+  .topbar nav a:hover { color: var(--text); background: var(--border); }
+  .topbar nav a.active { color: var(--text); background: var(--border); }
+
+  .topbar .toggle-lang {
+    font-size: 11px;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-family: monospace;
+    transition: all 0.15s;
+  }
+  .topbar .toggle-lang:hover { color: var(--text); border-color: var(--text-muted); }
+
+  .main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  #map {
+    flex: 1;
+    z-index: 1;
+  }
+
+  .leaflet-tile-pane { filter: brightness(0.85) saturate(0.9); }
+  .leaflet-control-zoom a {
+    background: var(--surface) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+  }
+  .leaflet-control-attribution {
+    background: rgba(13,17,23,0.7) !important;
+    color: var(--text-muted) !important;
+    font-size: 9px !important;
+  }
+
+  .sidebar {
+    width: 340px;
+    background: var(--surface);
+    border-left: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-shrink: 0;
+    direction: rtl;
+    z-index: 100;
+  }
+
+  .sidebar-header {
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sidebar-header h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .sidebar-header .subtitle {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .filter-chips {
+    padding: 12px 20px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .chip {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.15s;
+    font-family: 'IRANSansX', sans-serif;
+    direction: rtl;
+  }
+
+  .chip.active { opacity: 1; }
+  .chip.inactive { opacity: 0.35; }
+
+  .chip-iran-city    { background: rgba(231,76,60,0.15);  border-color: var(--iran-city);      color: var(--iran-city); }
+  .chip-foreign-city { background: rgba(93,173,226,0.15); border-color: var(--foreign-city);   color: var(--foreign-city); }
+  .chip-iran-country { background: rgba(192,57,43,0.15);  border-color: var(--iran-country);   color: var(--iran-country); }
+  .chip-foreign-country { background: rgba(41,128,185,0.15); border-color: var(--foreign-country); color: var(--foreign-country); }
+
+  .place-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 0;
+  }
+
+  .place-list::-webkit-scrollbar { width: 4px; }
+  .place-list::-webkit-scrollbar-track { background: transparent; }
+  .place-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .place-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(33,38,45,0.5);
+    transition: background 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .place-item:hover { background: rgba(255,255,255,0.04); }
+  .place-item.selected { background: rgba(255,255,255,0.07); }
+
+  .place-item .place-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .place-item .place-name {
+    font-size: 14px;
+    color: var(--text);
+    flex: 1;
+    text-align: right;
+  }
+
+  .place-item .place-count {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: monospace;
+    flex-shrink: 0;
+    direction: ltr;
+  }
+
+  .context-panel {
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+    max-height: 280px;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+  }
+
+  .context-panel.visible { display: flex; }
+
+  .context-panel-header {
+    padding: 12px 20px 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    direction: ltr;
+  }
+
+  .context-panel-header .place-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    direction: rtl;
+  }
+
+  .context-close {
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1;
+  }
+  .context-close:hover { color: var(--text); }
+
+  .context-sentence {
+    padding: 10px 20px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #c9d1d9;
+    border-bottom: 1px solid rgba(33,38,45,0.5);
+    direction: rtl;
+    text-align: right;
+  }
+
+  .context-sentence .highlight {
+    color: var(--text);
+    font-weight: 600;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 1px;
+  }
+
+  .context-sentence .source-tag {
+    display: inline-block;
+    font-size: 10px;
+    color: var(--text-muted);
+    font-family: monospace;
+    margin-right: 8px;
+    direction: ltr;
+  }
+
+  .timeline {
+    height: 48px;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 16px;
+    flex-shrink: 0;
+    direction: ltr;
+  }
+
+  .timeline label {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: monospace;
+    white-space: nowrap;
+  }
+
+  .timeline input[type=range] {
+    flex: 1;
+    accent-color: var(--iran-city);
+    height: 3px;
+  }
+
+  .timeline .date-display {
+    font-size: 11px;
+    color: var(--text);
+    font-family: monospace;
+    white-space: nowrap;
+    min-width: 90px;
+  }
+
+  .stats-bar {
+    position: absolute;
+    bottom: 58px;
+    left: 20px;
+    z-index: 500;
+    display: flex;
+    gap: 8px;
+    direction: ltr;
+  }
+
+  .stat-pill {
+    background: rgba(13,17,23,0.85);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    backdrop-filter: blur(4px);
+  }
+
+  .stat-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">nik<sup>³</sup></div>
+  <nav>
+    <a onclick="window.location='#'">خانه</a>
+    <a class="active">نقشه</a>
+    <a onclick="window.location='#'">نیک‌بانک</a>
+  </nav>
+  <div class="toggle-lang">EN | فا</div>
+</div>
+
+<div class="main">
+  <div id="map"></div>
+
+  <div style="position:absolute; bottom:58px; right:360px; z-index:500; direction:ltr;">
+    <div style="background:rgba(13,17,23,0.85); border:1px solid #21262d; border-radius:8px; padding:8px 14px; backdrop-filter:blur(4px); display:flex; flex-direction:column; gap:6px; font-size:11px; font-family:monospace; color:#7d8590;">
+      <div style="display:flex;align-items:center;gap:8px">
+        <div style="width:10px;height:10px;border-radius:50%;background:#f24444"></div>
+        Iranian city
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <div style="width:10px;height:10px;border-radius:50%;background:#f27c1a;border:1.5px solid rgba(255,255,255,0.7)"></div>
+        Foreign city
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;color:#555">
+        dot size = mention frequency
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-pill">
+      <div class="stat-dot" style="background:var(--iran-city)"></div>
+      <span id="iran-city-count">0</span> شهر ایرانی
+    </div>
+    <div class="stat-pill">
+      <div class="stat-dot" style="background:var(--foreign-city)"></div>
+      <span id="foreign-city-count">0</span> شهر خارجی
+    </div>
+    <div class="stat-pill">
+      <div class="stat-dot" style="background:var(--text-muted)"></div>
+      <span id="article-count">945</span> مقاله
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>مکان‌های خبری</h2>
+      <div class="subtitle" id="sidebar-subtitle">مکان‌های ذکر شده در مقالات اخیر</div>
+    </div>
+
+    <div class="filter-chips">
+      <div class="chip chip-iran-city active" data-type="iran-city" onclick="toggleFilter(this)">شهرهای ایران</div>
+      <div class="chip chip-foreign-city active" data-type="foreign-city" onclick="toggleFilter(this)">شهرهای خارجی</div>
+      <div class="chip chip-iran-country active" data-type="iran-country" onclick="toggleFilter(this)">ایران</div>
+      <div class="chip chip-foreign-country active" data-type="foreign-country" onclick="toggleFilter(this)">کشورها</div>
+    </div>
+
+    <div class="place-list" id="place-list"></div>
+
+    <div class="context-panel" id="context-panel">
+      <div class="context-panel-header">
+        <span class="place-label" id="context-place-name"></span>
+        <span class="context-close" onclick="closeContext()">×</span>
+      </div>
+      <div id="context-sentences"></div>
+    </div>
+  </div>
+</div>
+
+<div class="timeline">
+  <label>تاریخ:</label>
+  <input type="range" id="timeline-slider" min="0" max="100" value="100" oninput="updateTimeline(this.value)">
+  <div class="date-display" id="timeline-date">۱۶ بهمن ۱۴۰۴</div>
+</div>
+
+<script>
+const PLACES = [
+  { name_fa: 'تهران', name_en: 'Tehran', lat: 35.6892, lng: 51.3890, type: 'iran-city', color: '#f24444', ring: false, count: 312, contexts: [{ text: 'در <mark>تهران</mark> تظاهرات گسترده‌ای برگزار شد که در آن هزاران نفر شرکت کردند.', source: 'IranWire' }, { text: 'مقامات امنیتی در <mark>تهران</mark> اعلام کردند که وضعیت تحت کنترل است.', source: 'BBC Persian' }, { text: 'صدای انفجارهای شدید در <mark>تهران</mark> شنیده شد.', source: 'Mehr News' }] },
+  { name_fa: 'اصفهان', name_en: 'Isfahan', lat: 32.6539, lng: 51.6660, type: 'iran-city', color: '#d4b800', ring: false, count: 87, contexts: [{ text: 'پایگاه هوایی در نزدیکی <mark>اصفهان</mark> هدف حمله قرار گرفت.', source: 'IranWire' }, { text: 'مراسم تشییع شهدا در <mark>اصفهان</mark> با حضور مقامات برگزار شد.', source: 'IRNA' }] },
+  { name_fa: 'مشهد', name_en: 'Mashhad', lat: 36.2972, lng: 59.6057, type: 'iran-city', color: '#18c84a', ring: false, count: 54, contexts: [{ text: 'اعتراضات در <mark>مشهد</mark> به خیابان‌های اصلی شهر کشیده شد.', source: 'IranWire' }] },
+  { name_fa: 'شیراز', name_en: 'Shiraz', lat: 29.5917, lng: 52.5836, type: 'iran-city', color: '#4466f5', ring: false, count: 31, contexts: [{ text: 'دانشجویان در <mark>شیراز</mark> در اعتراض به بازداشت همکلاسی‌هایشان تجمع کردند.', source: 'IranWire' }] },
+  { name_fa: 'تبریز', name_en: 'Tabriz', lat: 38.0800, lng: 46.2919, type: 'iran-city', color: '#cc33cc', ring: false, count: 28, contexts: [{ text: 'کارگران در <mark>تبریز</mark> دست به اعتصاب زدند.', source: 'IranWire' }] },
+  { name_fa: 'ایران', name_en: 'Iran', lat: 32.4279, lng: 53.6880, type: 'iran-country', color: '#f24444', ring: false, count: 489, contexts: [{ text: '<mark>ایران</mark> و روسیه توافقنامه نظامی جدید امضا کردند.', source: 'BBC Persian' }, { text: 'آمریکا تحریم‌های جدیدی علیه مقامات <mark>ایران</mark> اعمال کرد.', source: 'VOA Farsi' }] },
+  { name_fa: 'واشنگتن', name_en: 'Washington', lat: 38.9072, lng: -77.0369, type: 'foreign-city', color: '#f27c1a', ring: true, count: 198, contexts: [{ text: 'وزارت خزانه‌داری در <mark>واشنگتن</mark> تحریم‌های جدید اعلام کرد.', source: 'VOA Farsi' }, { text: 'کاخ سفید در <mark>واشنگتن</mark> بیانیه‌ای درباره مذاکرات صادر کرد.', source: 'BBC Persian' }] },
+  { name_fa: 'مسکو', name_en: 'Moscow', lat: 55.7558, lng: 37.6176, type: 'foreign-city', color: '#00c89e', ring: true, count: 143, contexts: [{ text: 'مقامات ارشد ایران و روسیه در <mark>مسکو</mark> دیدار کردند.', source: 'BBC Persian' }, { text: 'نشست سه‌جانبه در <mark>مسکو</mark> با حضور وزرای خارجه برگزار شد.', source: 'IranWire' }] },
+  { name_fa: 'لندن', name_en: 'London', lat: 51.5074, lng: -0.1278, type: 'foreign-city', color: '#8844e8', ring: true, count: 76, contexts: [{ text: 'گزارش‌گران بدون مرز در <mark>لندن</mark> گزارش جدیدی درباره آزادی مطبوعات در ایران منتشر کرد.', source: 'IranWire' }] },
+  { name_fa: 'بیروت', name_en: 'Beirut', lat: 33.8938, lng: 35.5018, type: 'foreign-city', color: '#00b8d4', ring: true, count: 62, contexts: [{ text: 'نیروهای حزب‌الله در <mark>بیروت</mark> آمادگی خود را اعلام کردند.', source: 'IranWire' }] },
+  { name_fa: 'بغداد', name_en: 'Baghdad', lat: 33.3152, lng: 44.3661, type: 'foreign-city', color: '#72c800', ring: true, count: 55, contexts: [{ text: 'مذاکرات ایران و آمریکا در <mark>بغداد</mark> از سر گرفته شد.', source: 'BBC Persian' }] },
+  { name_fa: 'دمشق', name_en: 'Damascus', lat: 33.5138, lng: 36.2765, type: 'foreign-city', color: '#f228a0', ring: true, count: 41, contexts: [{ text: 'مقامات ایرانی در <mark>دمشق</mark> با مسئولان سوری دیدار کردند.', source: 'IRNA' }] },
+  { name_fa: 'آمریکا', name_en: 'United States', lat: 37.0902, lng: -95.7129, type: 'foreign-country', color: '#f27c1a', ring: true, count: 234, contexts: [{ text: '<mark>آمریکا</mark> سپاه پاسداران را به عنوان سازمان تروریستی تعیین کرد.', source: 'VOA Farsi' }] },
+  { name_fa: 'روسیه', name_en: 'Russia', lat: 61.5240, lng: 105.3188, type: 'foreign-country', color: '#00c89e', ring: true, count: 167, contexts: [{ text: '<mark>روسیه</mark> اعلام کرد که از ایران در شورای امنیت حمایت خواهد کرد.', source: 'BBC Persian' }] },
+  { name_fa: 'اسرائیل', name_en: 'Israel', lat: 31.0461, lng: 34.8516, type: 'foreign-country', color: '#0094f5', ring: true, count: 189, contexts: [{ text: 'حمله پهپادی از خاک ایران به <mark>اسرائیل</mark> تایید شد.', source: 'BBC Persian' }] },
+];
+
+const map = L.map('map', { center: [30, 45], zoom: 4, zoomControl: true, attributionControl: true });
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '© OpenStreetMap © CARTO',
+  subdomains: 'abcd',
+  maxZoom: 19,
+}).addTo(map);
+
+const markers = [];
+const activeFilters = new Set(['iran-city', 'foreign-city', 'iran-country', 'foreign-country']);
+let selectedPlace = null;
+
+function dotSize(count, type) {
+  const base = type === 'iran-country' || type === 'foreign-country' ? 14 : 8;
+  return Math.min(base + Math.sqrt(count) * 1.2, 36);
+}
+
+function makePulseIcon(color, size, ring) {
+  const half = size / 2;
+  const border = ring ? 'border: 2px solid rgba(255,255,255,0.75);' : '';
+  const delay = (Math.random() * 1.8).toFixed(2);
+  return L.divIcon({
+    className: '',
+    html: `
+      <div style="width:${size}px;height:${size}px;border-radius:50%;background:${color};position:relative;${border}box-shadow:0 0 ${Math.round(size*0.8)}px ${color}66;">
+        <div style="position:absolute;inset:0;border-radius:50%;background:${color};animation:pulse-ring 2.2s ease-out infinite;animation-delay:${delay}s;"></div>
+      </div>`,
+    iconSize: [size, size],
+    iconAnchor: [half, half],
+  });
+}
+
+const styleEl = document.createElement('style');
+styleEl.textContent = `
+  @keyframes pulse-ring {
+    0%   { transform: scale(1);   opacity: 0.7; }
+    70%  { transform: scale(2.4); opacity: 0; }
+    100% { transform: scale(2.4); opacity: 0; }
+  }`;
+document.head.appendChild(styleEl);
+
+function renderMarkers() {
+  markers.forEach(m => map.removeLayer(m));
+  markers.length = 0;
+
+  PLACES.forEach(place => {
+    if (!activeFilters.has(place.type)) return;
+    const size = dotSize(place.count, place.type);
+    const icon = makePulseIcon(place.color, size, place.ring);
+    const marker = L.marker([place.lat, place.lng], { icon }).addTo(map).on('click', () => selectPlace(place));
+    marker.bindTooltip(`
+      <div style="font-family:'IRANSansX',sans-serif;direction:rtl;text-align:right;padding:2px 0">
+        <div style="font-size:14px;font-weight:600;color:#e6edf3">${place.name_fa}</div>
+        <div style="font-size:11px;color:#7d8590;margin-top:2px">${place.count} بار ذکر شده</div>
+      </div>`,
+      { direction: 'top', className: 'nik-tooltip', offset: [0, -size/2 - 4] }
+    );
+    markers.push(marker);
+  });
+
+  document.getElementById('iran-city-count').textContent =
+    String(PLACES.filter(p => p.type === 'iran-city' && activeFilters.has('iran-city')).length);
+  document.getElementById('foreign-city-count').textContent =
+    String(PLACES.filter(p => p.type === 'foreign-city' && activeFilters.has('foreign-city')).length);
+}
+
+const tooltipStyle = document.createElement('style');
+tooltipStyle.textContent = `
+  .nik-tooltip {
+    background: #161b22 !important;
+    border: 1px solid #30363d !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4) !important;
+    color: #e6edf3 !important;
+    padding: 8px 12px !important;
+  }
+  .nik-tooltip::before { display: none !important; }`;
+document.head.appendChild(tooltipStyle);
+
+function renderPlaceList() {
+  const list = document.getElementById('place-list');
+  const sorted = [...PLACES].filter(p => activeFilters.has(p.type)).sort((a, b) => b.count - a.count);
+  list.innerHTML = sorted.map((p, index) => `
+    <div class="place-item ${selectedPlace?.name_fa === p.name_fa ? 'selected' : ''}" onclick="selectPlaceByIndex(${index})">
+      <div class="place-name">${p.name_fa}</div>
+      <div class="place-count">${p.count}×</div>
+      <div class="place-dot" style="background:${p.color}"></div>
+    </div>
+  `).join('');
+  window.__filteredPlaces = sorted;
+}
+
+function selectPlaceByIndex(index) {
+  const filtered = window.__filteredPlaces || [];
+  const place = filtered[index];
+  if (place) selectPlace(place);
+}
+
+function selectPlace(place) {
+  selectedPlace = place;
+  map.flyTo([place.lat, place.lng], place.type === 'iran-country' || place.type === 'foreign-country' ? 5 : 7, { duration: 1.2 });
+  document.getElementById('context-place-name').textContent = place.name_fa;
+  document.getElementById('context-place-name').style.color = place.color;
+  const sentencesEl = document.getElementById('context-sentences');
+  sentencesEl.innerHTML = place.contexts.map(ctx => `
+    <div class="context-sentence">
+      <span class="source-tag">${ctx.source}</span>
+      ${ctx.text.replace('<mark>', `<span class="highlight" style="color:${place.color};border-color:${place.color}">`).replace('</mark>', '</span>')}
+    </div>
+  `).join('');
+  document.getElementById('context-panel').classList.add('visible');
+  renderPlaceList();
+}
+
+function closeContext() {
+  selectedPlace = null;
+  document.getElementById('context-panel').classList.remove('visible');
+  renderPlaceList();
+}
+
+function toggleFilter(chip) {
+  const type = chip.dataset.type;
+  if (activeFilters.has(type)) {
+    activeFilters.delete(type);
+    chip.classList.remove('active');
+    chip.classList.add('inactive');
+  } else {
+    activeFilters.add(type);
+    chip.classList.add('active');
+    chip.classList.remove('inactive');
+  }
+  renderMarkers();
+  renderPlaceList();
+}
+
+const dates = ['۱۵ دی ۱۴۰۴', '۱ بهمن ۱۴۰۴', '۸ بهمن ۱۴۰۴', '۱۶ بهمن ۱۴۰۴'];
+function updateTimeline(val) {
+  const idx = Math.floor(val / (100 / (dates.length - 1)));
+  document.getElementById('timeline-date').textContent = dates[Math.min(idx, dates.length - 1)];
+}
+
+window.toggleFilter = toggleFilter;
+window.closeContext = closeContext;
+window.updateTimeline = updateTimeline;
+window.selectPlaceByIndex = selectPlaceByIndex;
+
+renderMarkers();
+renderPlaceList();
+</script>
+</body>
+</html>
